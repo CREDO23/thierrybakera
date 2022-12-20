@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
 $max-width: 1180px !default;
+
+$secondary-yellow : #FAE6B1 ;
+$primary-yellow : #FFA101 ;
+$secondary-blue : #B3DEE5;
+$primary-blue : #31525B ;
+$white : #FFFFFF ;
+$black : #333333 ;
+
+$poppins : 'Poppins';
 
 $breakpoints: (
   "small": 320px,
