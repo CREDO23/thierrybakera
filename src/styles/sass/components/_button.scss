@@ -1,0 +1,8 @@
+@use '../abstracts/mixins' as *;
+
+
+.btn{
+    @include center-content; 
+    cursor: pointer;
+    @include btn-framed(green ,rgb(106, 204, 106) );
+}

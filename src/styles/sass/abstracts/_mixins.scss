@@ -1,5 +1,4 @@
-@use 'variables' as v;
-
+@use "variables" as v;
 
 @mixin position-abs($top, $right, $bottom, $left) {
   position: absolute;
@@ -26,7 +25,7 @@
   -webkit-border-radius: $radius;
 }
 
-@mixin center-cotent {
+@mixin center-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,10 +40,54 @@
   width: 100%;
 }
 
-@mixin mediaquery($key){
-  $size : map-get($breakpoints , $key);
+@mixin mediaquery($key) {
+  $size: map-get($breakpoints, $key);
 
-  @media only screen and (min-width : $size) {
-    @content
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin btn-framed($color , $hoverColor: inherit) {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  border: 1px solid #{$color};
+  z-index: 0;
+  width: 150px;
+  height: 50px;
+  background: transparent;
+  color : #{$color};
+
+  &:hover{
+    color: $hoverColor;
+    border-color:  #{$hoverColor};
+    transition: 0s;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    background: white;
+    z-index: -1;
+    transition: 0.8s;
+  }
+
+  &::before {
+    height: calc(100% + 2px);
+    width: 90%;
+  }
+
+  &::after {
+    width: calc(100% + 2px);
+    height: 30px;
+  }
+
+  &:hover::after {
+    height: 0px;
+  }
+
+  &:hover::before {
+    width: 0px;
   }
 }
