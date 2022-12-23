@@ -4,5 +4,8 @@
 .btn{
     @include center-content; 
     cursor: pointer;
-    @include btn-framed(green ,rgb(106, 204, 106) );
+    height: 40px;
+    width: 100px;
+    // @include btn-framed(green , white ,rgb(106, 204, 106) );
+    // @include btn-thin(rgba(0, 128, 0, 0.589))
 }
