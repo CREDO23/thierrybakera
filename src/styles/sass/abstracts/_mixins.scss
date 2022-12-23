@@ -1,0 +1,50 @@
+@use 'variables' as v;
+
+
+@mixin position-abs($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin link-behavior($initcolor, $color) {
+  color: $initcolor;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color;
+  }
+}
+
+@mixin border($color, $style, $width, $radius) {
+  border-style: $style;
+  border-width: $width;
+  border-color: $color;
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin center-cotent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin contenair {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+}
+
+@mixin mediaquery($key){
+  $size : map-get($breakpoints , $key);
+
+  @media only screen and (min-width : $size) {
+    @content
+  }
+}

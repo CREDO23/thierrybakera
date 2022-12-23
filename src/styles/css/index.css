@@ -1,5 +1,53 @@
-h1 {
-  color: blue;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: Poppins, "san-serif";
+}
+
+.text-100 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-200 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-300 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-400 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-500 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-600 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-700 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-800 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 /*# sourceMappingURL=index.css.map */

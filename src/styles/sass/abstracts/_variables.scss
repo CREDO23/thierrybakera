@@ -1,42 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-$max-width: 1180px !default;
+$max-width: 1248px !default;
 
 //family font
-$poppins : 'Poppins';
-
+$poppins: "Poppins";
 
 //breakpoints
 $breakpoints: (
-  "small": 320px,
-  "medium": 768px,
-  "large": 1024px,
+  "phone": 400px,
+  "phone-wide": 480px,
+  "phablet": 560px,
+  "tablet-small": 640px,
+  "tablet": 768px,
+  "tablet-wide": 1024px,
+  "desktop": 1248px,
 ) !default;
 
-$colors : (
-  primary : (
-    yellow : #FFA101,
-    blue : #31525B,
-    black : #333333
+$colors: (
+  primary: (
+    yellow: #ffa101,
+    blue: #31525b, 
+    black: #333333,
   ),
-  secondary : (
-    yellow : #FAE6B1,
-    blue : #B3DEE5,
-    white : #FFFFFF
-  )
+  secondary: (
+    yellow: #fae6b1,
+    blue: #b3dee5,
+    white: #ffffff,
+  ),
 );
 
-$fontSize : (
-  small : (
-    100 : 0.75rem,
-    200 : 0.875rem,
-    300 : 1rem,
-    400 : 1.125rem
-  ),
-  large : (
-    100 : 1.25rem,
-    200 : 1.5rem,
-    300 : 1.875rem,
-    400 : 2.25rem
-  )
+$fontSizes: (
+    100: 0.75rem,
+    200: 0.875rem,
+    300: 1rem,
+    400: 1.125rem,
+    500: 1.25rem,
+    600: 1.5rem,
+    700: 1.875rem,
+    800: 2.25rem,
+);
+
+$lineheigths: (
+    100: 1rem,
+    200: 1.25rem,
+    300: 1.5rem,
+    400: 1.75rem,
+    500: 1.75rem,
+    600: 2rem,
+    700: 2.25rem,
+    800: 2.5rem,
 );
