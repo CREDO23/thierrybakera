@@ -1,4 +1,4 @@
-@use "variables" as v;
+@use "variables" as *;
 
 @mixin position-abs($top, $right, $bottom, $left) {
   position: absolute;
@@ -17,7 +17,7 @@
   }
 }
 
-@mixin border($color, $style, $width, $radius) {
+@mixin border($color : black, $style : solid, $width : 1px, $radius : 5px) {
   border-style: $style;
   border-width: $width;
   border-color: $color;
@@ -40,10 +40,10 @@
   width: 100%;
 }
 
-@mixin mediaquery($key) {
-  $size: map-get($breakpoints, $key);
+@mixin mq($target) {
+  $size: map-get($breakpoints,$target);
 
-  @media only screen and (min-width: $size) {
+  @media only screen and (max-width: $size) {
     @content;
   }
 }
@@ -90,7 +90,7 @@
   }
 }
 
-@mixin btn-thin($hovercolor) {
+@mixin btn-thin($hovercolor : rgb(182, 177, 177)) {
   position: relative;
   transition: all 0.5s;
   border: none;

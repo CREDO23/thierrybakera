@@ -1,0 +1,14 @@
+@use './variables' as *;
+
+
+@function clr($color , $key){
+    $color :  map-get(map-get($colors, $color), $key) ;
+
+    @return $color
+};
+
+@function ft-sz($shade){
+    $fontsize : map-get($fontSizes , $shade);
+    @return $fontsize
+};
+

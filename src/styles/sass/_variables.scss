@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
 
 $max-width: 1248px !default;
-
-//family font
-$poppins: "Poppins";
 
 //breakpoints
 $breakpoints: (
@@ -20,12 +17,12 @@ $colors: (
   primary: (
     yellow: #ffa101,
     blue: #31525b, 
-    black: #333333,
+    base: #333333,
   ),
   secondary: (
     yellow: #fae6b1,
     blue: #b3dee5,
-    white: #ffffff,
+    base: #ffffff,
   ),
 );
 

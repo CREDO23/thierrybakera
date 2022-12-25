@@ -1,4 +1,4 @@
-@use '../abstracts/mixins' as *;
+@use '../mixins' as *;
 
 
 .btn{
@@ -6,6 +6,5 @@
     cursor: pointer;
     height: 40px;
     width: 100px;
-    // @include btn-framed(green , white ,rgb(106, 204, 106) );
-    // @include btn-thin(rgba(0, 128, 0, 0.589))
+    @include btn-framed(white  , #31525b , #ffa101)
 }
