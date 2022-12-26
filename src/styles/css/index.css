@@ -80,6 +80,14 @@ footer .navigation-section {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 400px) {
+  footer .navigation-section {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
 footer .navigation-section ul {
   padding: 0;
@@ -95,6 +103,9 @@ footer .navigation-section ul {
 footer .navigation-section ul li {
   cursor: pointer;
   font-weight: light;
+}
+footer .navigation-section ul li:hover {
+  color: #ffa101;
 }
 
 .btn {

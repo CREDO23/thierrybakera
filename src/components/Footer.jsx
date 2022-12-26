@@ -1,3 +1,6 @@
+import {FaFacebook , FaGithub , FaLinkedin , FaInstagram} from 'react-icons/fa'
+
+
 export default function () {
   return (
     <footer>
@@ -9,13 +12,18 @@ export default function () {
         <button>Hire me</button>
       </div>
       <div className="navigation-section">
-        <div className="media"></div>
           <ul>
             <li>About me</li>
             <li>Projects</li>
             <li>Services</li>
             <li>Experiences</li>
           </ul>
+          <ul className="media">
+            <li><FaFacebook size={20}/></li>
+            <li><FaGithub size={20}/></li>
+            <li><FaInstagram size={20}/></li>
+            <li><FaLinkedin size={20}/></li>
+        </ul>
       </div>
     </footer>
   );

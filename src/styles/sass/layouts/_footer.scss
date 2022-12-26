@@ -58,6 +58,13 @@ footer {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    @include mq(phone){
+        flex-direction: column;
+        justify-content: center;
+        gap : 1rem
+    }
 
     ul {
       padding: 0;
@@ -70,9 +77,14 @@ footer {
       font-size: ft-sz(100);
       color: clr(secondary, yellow);
 
+
       li {
         cursor: pointer;
         font-weight: light;
+
+        &:hover{
+            color: clr(primary, yellow); ;
+        }
       }
     }
   }
