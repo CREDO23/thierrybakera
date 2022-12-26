@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 footer {
   width: 100%;
-  background-color: #31525b;
+  background: rgb(49, 82, 91);
+  background: linear-gradient(239deg, rgb(49, 82, 91) 0%, rgb(220, 192, 113) 46%, rgb(49, 82, 91) 100%);
   height: auto;
   padding: 1rem;
   display: flex;
@@ -39,42 +40,52 @@ footer .hire-me-section > div span {
 }
 footer .hire-me-section button {
   margin: 1rem;
-  transition: all 0.3s ease-in-out;
   position: relative;
-  border: 1px solid #ffffff;
-  z-index: 0;
-  background: transparent;
-  color: #ffffff;
+  transition: all 0.5s;
+  border: none;
+  background: inherit;
+  color: #b3dee5;
   height: 2rem;
-  width: 5rem;
+  width: 6rem;
   border-radius: 4px;
-  color: #ffa101;
+  color: #ffffff;
 }
 footer .hire-me-section button:hover {
-  color: #ffa101;
-  border-color: #ffa101;
-  transition: 0s;
-}
-footer .hire-me-section button::after, footer .hire-me-section button::before {
-  content: "";
-  position: absolute;
-  background: #31525b;
-  z-index: -1;
-  transition: 0.8s;
-}
-footer .hire-me-section button::before {
-  height: calc(100% + 2px);
-  width: 90%;
+  background: transparent;
+  color: #ffffff;
 }
 footer .hire-me-section button::after {
-  width: calc(100% + 2px);
-  height: 30px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
 }
 footer .hire-me-section button:hover::after {
-  height: 0px;
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+  background: transparent;
+}
+footer .hire-me-section button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid #ffffff;
+  transform: scaleX(1.5);
 }
 footer .hire-me-section button:hover::before {
-  width: 0px;
+  opacity: 1;
+  transform: scale(1, 1);
 }
 footer .navigation-section {
   width: 100%;

@@ -4,7 +4,14 @@
 
 footer {
   width: 100%;
-  background-color: clr(primary, blue);
+  //   background-color: clr(primary, blue);
+  background: rgb(49, 82, 91);
+  background: linear-gradient(
+    239deg,
+    rgba(49, 82, 91, 1) 0%,
+    rgb(220, 192, 113) 46%,
+    rgba(49, 82, 91, 1) 100%
+  );
   height: auto;
   padding: 1rem;
   display: flex;
@@ -35,22 +42,19 @@ footer {
       span {
         color: clr(secondary, base);
         font-size: ft-sz(300);
-        @include mq(phone){
-            font-size: ft-sz(200);
+        @include mq(phone) {
+          font-size: ft-sz(200);
         }
       }
     }
     button {
       margin: 1rem;
-      @include btn-framed(
-        clr(secondary, base),
-        clr(primary, blue),
-        clr(primary, yellow)
-      );
+      @include btn-thin(clr(secondary, blue), clr(secondary, base));
       height: 2rem;
-      width: 5rem;
+      width: 6rem;
       border-radius: 4px;
-      color: clr(primary, yellow);
+      color: clr(secondary, base);
+    
     }
   }
 
@@ -60,10 +64,10 @@ footer {
     align-items: center;
     justify-content: space-between;
 
-    @include mq(phone){
-        flex-direction: column;
-        justify-content: center;
-        gap : 1rem
+    @include mq(phone) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
     }
 
     ul {
@@ -77,13 +81,12 @@ footer {
       font-size: ft-sz(100);
       color: clr(secondary, yellow);
 
-
       li {
         cursor: pointer;
         font-weight: light;
 
-        &:hover{
-            color: clr(primary, yellow); ;
+        &:hover {
+          color: clr(primary, yellow);
         }
       }
     }

@@ -90,10 +90,12 @@
   }
 }
 
-@mixin btn-thin($hovercolor : rgb(182, 177, 177)) {
+@mixin btn-thin($color ,$hovercolor : rgb(182, 177, 177)) {
   position: relative;
   transition: all 0.5s;
   border: none;
+  background: inherit;
+  color: #{$color};
 
   &:hover{
     background: transparent;
@@ -129,7 +131,7 @@
     opacity: 0;
     transition: all 0.3s;
     border: 1px solid  #{$hovercolor};
-    transform: scale(1.2, 1.2);
+    transform: scaleX(1.5);
   }
 
   &:hover::before {

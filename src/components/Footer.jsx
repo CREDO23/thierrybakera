@@ -6,7 +6,7 @@ export default function () {
     <footer>
       <div className="hire-me-section">
         <div>
-          <span>Have any project in mind ?</span>
+          <span>Have any Project in Mind ?</span>
           <div></div>
         </div>
         <button>Hire me</button>
