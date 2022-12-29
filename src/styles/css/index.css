@@ -42,6 +42,7 @@ footer .hire-me-section button {
   margin: 1rem;
   position: relative;
   transition: all 0.5s;
+  cursor: pointer;
   border: none;
   background: inherit;
   color: #b3dee5;
@@ -127,7 +128,8 @@ header {
   align-items: center;
   justify-content: space-between;
   background: white;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.03);
+  z-index: 30;
 }
 header .logo {
   display: flex;
@@ -204,6 +206,7 @@ nav ul li .active::after {
 nav .hamburger {
   display: none;
   cursor: pointer;
+  color: #31525b;
 }
 @media only screen and (max-width: 760px) {
   nav .hamburger {
@@ -232,6 +235,72 @@ nav .mobile-menu {
   top: 0;
 }
 
+.home {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem;
+  background-image: -webkit-linear-gradient(90deg, transparent 0%, transparent 50%, white 50%, white 100%), -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 50%, white 50%, white 100%);
+  background-size: 0.2em 0.2em;
+}
+@media only screen and (max-width: 500px) {
+  .home {
+    flex-direction: column;
+  }
+}
+.home .catch-phrase {
+  color: #333333;
+}
+.home .catch-phrase span {
+  color: #ffa101;
+}
+.home .catch-phrase .buttons {
+  margin: 1rem 0;
+  display: flex;
+  gap: 2rem;
+}
+.home .catch-phrase .buttons button {
+  height: 2rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 1rem;
+  color: white;
+}
+.home .catch-phrase .buttons .hire-me {
+  background: #31525b;
+}
+.home .catch-phrase .buttons .cv {
+  background: transparent;
+  color: #31525b;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #31525b;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.home .profil {
+  position: relative;
+}
+.home .profil::before {
+  content: "";
+  width: 95%;
+  height: 400px;
+  background: linear-gradient(239deg, rgb(49, 82, 91) 0%, rgb(220, 192, 113) 46%, rgb(49, 82, 91) 100%);
+  border-style: solid;
+  border-width: 0px;
+  border-color: #ffa101;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  -webkit-border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+}
+
 *,
 *::before,
 *::after {
@@ -239,8 +308,15 @@ nav .mobile-menu {
   font-family: Poppins, "san-serif";
 }
 
-body {
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
   margin: 0;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /*# sourceMappingURL=index.css.map */

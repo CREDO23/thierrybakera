@@ -42,6 +42,7 @@ nav {
   .hamburger {
     display: none;
     cursor: pointer;
+    color : clr(primary , blue);
 
     @include mq(tablet-small) {
       display: inline;

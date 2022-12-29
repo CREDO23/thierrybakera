@@ -1,0 +1,86 @@
+@use "../mixins" as *;
+@use "../variables";
+@use "../functions" as *;
+
+.home {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem;
+  background-image: -webkit-linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 50%,
+      white 50%,
+      white 100%
+    ),
+    -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03)
+          50%, white 50%, white 100%);
+  background-size: 0.2em 0.2em;
+
+  @include mq(phone) {
+    flex-direction: column;
+  }
+
+  .catch-phrase {
+    color: clr(primary, base);
+
+    span {
+      color: clr(primary, yellow);
+    }
+
+    .buttons{
+        margin: 1rem 0;
+        display: flex;
+        gap: 2rem;
+
+        button{
+            height: 2rem;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            padding: 0 1rem;
+            color : white
+        }
+
+        .hire-me{
+            background: clr(primary, blue);
+        }
+
+        .cv{
+            background: transparent;
+            color : clr(primary, blue);
+            @include border($color : clr(primary, blue), $style : solid, $width : 1px, $radius : 3px)
+        }
+    }
+  }
+
+  .profil {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 95%;
+      height: 400px;
+      background: linear-gradient(
+        239deg,
+        rgba(49, 82, 91, 1) 0%,
+        rgb(220, 192, 113) 46%,
+        rgba(49, 82, 91, 1) 100%
+      );
+      @include border(
+        $color: clr(primary, yellow),
+        $style: solid,
+        $width: 0px,
+        $radius: 30% 70% 70% 30% / 30% 30% 70% 70%
+      );
+      position: absolute;
+      top: 62%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -10;
+    }
+  }
+}

@@ -78,6 +78,7 @@
 @mixin btn-thin($color ,$hovercolor : rgb(182, 177, 177)) {
   position: relative;
   transition: all 0.5s;
+  cursor: pointer;
   border: none;
   background: inherit;
   color: #{$color};

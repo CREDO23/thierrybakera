@@ -7,6 +7,16 @@
     font-family: Poppins , 'san-serif';
   }
 
-  body{
-    margin: 0;
+  *::-webkit-scrollbar{
+    display: none;
   }
+
+  *{
+    margin: 0;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+          
+    -ms-overflow-style: none; 
+  }
+  

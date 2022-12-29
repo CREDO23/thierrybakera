@@ -14,7 +14,7 @@ export default function () {
         <span>hierry</span>
       </div>
        <Navigation/>
-        <button>Hire me</button>
+        <button>Contact me</button>
     </header>
   );
 }
