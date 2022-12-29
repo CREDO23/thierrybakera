@@ -145,47 +145,7 @@ header .logo .first-letter {
   color: white;
   border-radius: 3px;
 }
-header div {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-header div ul {
-  padding: 0;
-  margin: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  list-style-type: none;
-  font-size: 1rem;
-  color: #31525b;
-  position: relative;
-}
-@media only screen and (max-width: 500px) {
-  header div ul {
-    display: none;
-  }
-}
-header div ul .active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  width: 12px;
-  background: #fae6b1;
-  border-radius: 2px;
-}
-header div ul li {
-  cursor: pointer;
-  font-weight: light;
-  color: #31525b;
-}
-header div ul li:hover, header div ul li:focus, header div ul li:active {
-  color: #ffa101;
-}
-header div button {
+header button {
   margin: 1rem;
   padding: 0.3rem 1rem;
   background: #ffa101;
@@ -195,10 +155,81 @@ header div button {
   cursor: pointer;
   transition: all 0.5s ease;
 }
-header div button:hover {
+@media only screen and (max-width: 760px) {
+  header button {
+    display: none;
+  }
+}
+header button:hover {
   border: solid #ffa101 2px;
   color: #ffa101;
   background: transparent;
+}
+
+nav ul {
+  padding: 0;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  font-size: 1rem;
+  color: #31525b;
+}
+@media only screen and (max-width: 760px) {
+  nav ul {
+    display: none;
+  }
+}
+nav ul li {
+  cursor: pointer;
+  font-weight: light;
+  color: #31525b;
+  position: relative;
+}
+nav ul li:hover, nav ul li:focus, nav ul li:active {
+  color: #ffa101;
+}
+nav ul li .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 12px;
+  background: #fae6b1;
+  border-radius: 2px;
+}
+nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 760px) {
+  nav .hamburger {
+    display: inline;
+    margin: 1rem;
+    font-size: 1.875rem;
+  }
+}
+nav .cancel-hamburger {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  z-index: 20;
+  color: #31525b;
+}
+nav .mobile-menu {
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  background: #fae6b1;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 *,
