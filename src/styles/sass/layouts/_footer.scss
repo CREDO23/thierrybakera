@@ -4,7 +4,6 @@
 
 footer {
   width: 100%;
-  //   background-color: clr(primary, blue);
   background: rgb(49, 82, 91);
   background: linear-gradient(
     239deg,
@@ -84,10 +83,7 @@ footer {
       li {
         cursor: pointer;
         font-weight: light;
-
-        &:hover {
-          color: clr(primary, yellow);
-        }
+        @include link-behavior(clr(secondary, blue) ,clr(primary, yellow) )
       }
     }
   }

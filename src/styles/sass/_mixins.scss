@@ -25,21 +25,6 @@
   -webkit-border-radius: $radius;
 }
 
-@mixin center-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin contenair {
-  max-width: $max-width;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 5%;
-  padding-right: 5%;
-  width: 100%;
-}
-
 @mixin mq($target) {
   $size: map-get($breakpoints,$target);
 

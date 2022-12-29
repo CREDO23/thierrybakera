@@ -30,7 +30,7 @@ footer .hire-me-section > div div {
   background-color: #ffa101;
 }
 footer .hire-me-section > div span {
-  color: #ffffff;
+  color: #f5f5f5;
   font-size: 1rem;
 }
 @media only screen and (max-width: 500px) {
@@ -48,11 +48,11 @@ footer .hire-me-section button {
   height: 2rem;
   width: 6rem;
   border-radius: 4px;
-  color: #ffffff;
+  color: #f5f5f5;
 }
 footer .hire-me-section button:hover {
   background: transparent;
-  color: #ffffff;
+  color: #f5f5f5;
 }
 footer .hire-me-section button::after {
   content: "";
@@ -80,7 +80,7 @@ footer .hire-me-section button::before {
   z-index: 1;
   opacity: 0;
   transition: all 0.3s;
-  border: 1px solid #ffffff;
+  border: 1px solid #f5f5f5;
   transform: scaleX(1.5);
 }
 footer .hire-me-section button:hover::before {
@@ -114,50 +114,91 @@ footer .navigation-section ul {
 footer .navigation-section ul li {
   cursor: pointer;
   font-weight: light;
+  color: #b3dee5;
 }
-footer .navigation-section ul li:hover {
+footer .navigation-section ul li:hover, footer .navigation-section ul li:focus, footer .navigation-section ul li:active {
   color: #ffa101;
 }
 
-.btn {
+header {
+  width: 100%;
+  height: 3.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+header .logo {
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.5rem;
+  margin: 1rem;
   cursor: pointer;
-  height: 40px;
-  width: 100px;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  border: 1px solid white;
-  z-index: 0;
-  background: transparent;
+  color: #31525b;
+}
+header .logo .first-letter {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 0 0.5rem;
+  background: #ffa101;
   color: white;
+  border-radius: 3px;
 }
-.btn:hover {
-  color: #ffa101;
-  border-color: #ffa101;
-  transition: 0s;
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.btn::after, .btn::before {
+header div ul {
+  padding: 0;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  font-size: 1rem;
+  color: #31525b;
+  position: relative;
+}
+@media only screen and (max-width: 500px) {
+  header div ul {
+    display: none;
+  }
+}
+header div ul .active::after {
   content: "";
   position: absolute;
-  background: #31525b;
-  z-index: -1;
-  transition: 0.8s;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 12px;
+  background: #fae6b1;
+  border-radius: 2px;
 }
-.btn::before {
-  height: calc(100% + 2px);
-  width: 90%;
+header div ul li {
+  cursor: pointer;
+  font-weight: light;
+  color: #31525b;
 }
-.btn::after {
-  width: calc(100% + 2px);
-  height: 30px;
+header div ul li:hover, header div ul li:focus, header div ul li:active {
+  color: #ffa101;
 }
-.btn:hover::after {
-  height: 0px;
+header div button {
+  margin: 1rem;
+  padding: 0.3rem 1rem;
+  background: #ffa101;
+  color: #f5f5f5;
+  border: solid #ffa101 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
-.btn:hover::before {
-  width: 0px;
+header div button:hover {
+  border: solid #ffa101 2px;
+  color: #ffa101;
+  background: transparent;
 }
 
 *,
@@ -165,6 +206,10 @@ footer .navigation-section ul li:hover {
 *::after {
   box-sizing: border-box;
   font-family: Poppins, "san-serif";
+}
+
+body {
+  margin: 0;
 }
 
 /*# sourceMappingURL=index.css.map */
