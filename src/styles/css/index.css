@@ -245,9 +245,19 @@ nav .mobile-menu {
   background-image: -webkit-linear-gradient(90deg, transparent 0%, transparent 50%, white 50%, white 100%), -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 50%, white 50%, white 100%);
   background-size: 0.2em 0.2em;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1024px) {
   .home {
-    flex-direction: column;
+    gap: 6rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .home {
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .home {
+    flex-direction: column-reverse;
   }
 }
 .home .catch-phrase {

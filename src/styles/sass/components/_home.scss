@@ -20,9 +20,18 @@
           50%, white 50%, white 100%);
   background-size: 0.2em 0.2em;
 
-  @include mq(phone) {
-    flex-direction: column;
+  @include mq(tablet-wide){
+    gap: 6rem;
   }
+
+  @include mq(tablet){
+    gap: 1rem;
+  }
+
+  @include mq(tablet-small){
+    flex-direction: column-reverse;
+  }
+
 
   .catch-phrase {
     color: clr(primary, base);
