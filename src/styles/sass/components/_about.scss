@@ -1,0 +1,135 @@
+@use "../mixins" as *;
+@use "../variables";
+@use "../functions" as *;
+
+
+.about{
+    color:  clr(primary , blue);
+    background-image: -webkit-linear-gradient(
+        90deg,
+        transparent 0%,
+        transparent 50%,
+        white 50%,
+        white 100%
+      ),
+      -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03)
+            50%, white 50%, white 100%);
+    background-size: 0.2em 0.2em;
+    display: flex;
+
+    > div{
+        width: 60%;
+
+        @include mq(tablet-small){
+            width: 90%;
+        }
+    }
+
+    @include mq(tablet-small){
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 1.5rem 0;
+    }
+
+    .image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            height : 75%
+        }
+    }
+
+    .about-me{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include mq(tablet-small){
+            align-items: center;
+
+        }
+        
+
+        h2{
+            width: 90%;
+            position: relative;
+            margin-bottom: 1.25rem;
+
+            @include mq(tablet-small){
+                text-align: center;
+                width: 100%;
+            }
+
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                width: 60px;
+                border-radius: 5px;
+                background: clr(primary , yellow);
+
+                @include mq(tablet-small){
+                   display: none;
+                }
+            }
+        }
+
+        p{
+            width: 70%;
+
+            @include mq(tablet){
+                width: 90%;
+                text-align: center;
+            }
+        }
+
+        button{
+            margin: 1.25rem 0;
+            height: 2rem;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            padding: 0 1rem;
+            color: white;
+            background: clr(primary,yellow);
+
+            @include mq(tablet-small){
+                display: none;
+             }
+        }
+    }
+
+    .media-socials{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin: 1rem 0;
+
+        h3{
+            font-weight: 200;
+        }
+
+       
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+
+           li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap : .5rem
+           }
+        }
+    }
+}  

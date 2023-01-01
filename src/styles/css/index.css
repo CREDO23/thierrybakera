@@ -387,6 +387,120 @@ nav .mobile-menu {
   background: #333333;
 }
 
+.about {
+  color: #31525b;
+  background-image: -webkit-linear-gradient(90deg, transparent 0%, transparent 50%, white 50%, white 100%), -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 50%, white 50%, white 100%);
+  background-size: 0.2em 0.2em;
+  display: flex;
+}
+.about > div {
+  width: 60%;
+}
+@media only screen and (max-width: 760px) {
+  .about > div {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .about {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+}
+.about .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .image img {
+  height: 75%;
+}
+.about .about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (max-width: 760px) {
+  .about .about-me {
+    align-items: center;
+  }
+}
+.about .about-me h2 {
+  width: 90%;
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+@media only screen and (max-width: 760px) {
+  .about .about-me h2 {
+    text-align: center;
+    width: 100%;
+  }
+}
+.about .about-me h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 60px;
+  border-radius: 5px;
+  background: #ffa101;
+}
+@media only screen and (max-width: 760px) {
+  .about .about-me h2::after {
+    display: none;
+  }
+}
+.about .about-me p {
+  width: 70%;
+}
+@media only screen and (max-width: 900px) {
+  .about .about-me p {
+    width: 90%;
+    text-align: center;
+  }
+}
+.about .about-me button {
+  margin: 1.25rem 0;
+  height: 2rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 1rem;
+  color: white;
+  background: #ffa101;
+}
+@media only screen and (max-width: 760px) {
+  .about .about-me button {
+    display: none;
+  }
+}
+.about .media-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.about .media-socials h3 {
+  font-weight: 200;
+}
+.about .media-socials ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.about .media-socials ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
 *,
 *::before,
 *::after {

@@ -1,5 +1,4 @@
 import profil from "../assets/profil.png";
-import { IoIosArrowForward } from "react-icons/io";
 import { FaCheck } from "react-icons/fa";
 
 export default function () {

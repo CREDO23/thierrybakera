@@ -1,4 +1,4 @@
-import {FaFacebook , FaGithub , FaLinkedin , FaInstagram} from 'react-icons/fa'
+import {FaFacebook , FaGithub , FaLinkedin , FaInstagram , FaTwitter} from 'react-icons/fa'
 
 
 export default function () {
@@ -19,10 +19,11 @@ export default function () {
             <li>Experiences</li>
           </ul>
           <ul className="media">
+          <li><FaGithub size={20}/></li>
             <li><FaFacebook size={20}/></li>
-            <li><FaGithub size={20}/></li>
             <li><FaInstagram size={20}/></li>
             <li><FaLinkedin size={20}/></li>
+             <li><FaTwitter size={20}/></li>
         </ul>
       </div>
     </footer>
