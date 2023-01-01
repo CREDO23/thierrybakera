@@ -3,6 +3,7 @@
 @use "../functions" as *;
 
 .home {
+    position: relative;
   width: 100%;
   height: auto;
   display: flex;
@@ -20,49 +21,86 @@
           50%, white 50%, white 100%);
   background-size: 0.2em 0.2em;
 
-  @include mq(tablet-wide){
+  @include mq(tablet-wide) {
     gap: 6rem;
   }
 
-  @include mq(tablet){
+  @include mq(tablet) {
     gap: 1rem;
   }
 
-  @include mq(tablet-small){
+  @include mq(tablet-small) {
     flex-direction: column-reverse;
   }
 
+  &::after{
+    content: '';
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: clr(secondary , blue);
+    opacity: .25;
+    border-radius:   51% 49% 100% 0% / 45% 69% 31% 55% ;
+
+    @include mq(tablet) {
+        display: none;
+      }
+  }
+
+  &::before{
+    content: '';
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 12%;
+    left: 30%;
+    background: clr(secondary , yellow);
+    opacity: .4;
+    border-radius:  77% 23% 46% 54% / 45% 53% 47% 55% ;
+
+    @include mq(tablet) {
+        display: none;
+      }
+  }
 
   .catch-phrase {
     color: clr(primary, base);
+    position: relative;
 
     span {
       color: clr(primary, yellow);
     }
 
-    .buttons{
-        margin: 1rem 0;
-        display: flex;
-        gap: 2rem;
+    .buttons {
+      margin: 1rem 0;
+      display: flex;
+      gap: 2rem;
 
-        button{
-            height: 2rem;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            padding: 0 1rem;
-            color : white
-        }
+      button {
+        height: 2rem;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        padding: 0 1rem;
+        color: white;
+      }
 
-        .hire-me{
-            background: clr(primary, blue);
-        }
+      .hire-me {
+        background: clr(primary, blue);
+      }
 
-        .cv{
-            background: transparent;
-            color : clr(primary, blue);
-            @include border($color : clr(primary, blue), $style : solid, $width : 1px, $radius : 3px)
-        }
+      .cv {
+        background: transparent;
+        color: clr(primary, blue);
+        @include border(
+          $color: clr(primary, blue),
+          $style: solid,
+          $width: 1px,
+          $radius: 3px
+        );
+      }
     }
   }
 
@@ -90,6 +128,53 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: -10;
+    }
+
+    .freelancer,
+    .developper {
+      position: absolute;
+      color: clr(primary, blue);
+      background: white;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      font-size: ft-sz(100);
+      padding: 5px;
+      display: flex;
+      align-items: center;
+
+      .check {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 100%;
+        color: clr(secondary, base);
+      }
+
+      p {
+        opacity: 0.55;
+        font-size: ft-sz(50);
+      }
+    }
+
+    .freelancer {
+      top: 40%;
+
+      .check {
+        background: clr(primary, yellow);
+      }
+    }
+
+    .developper {
+      right: 0;
+      bottom: 5%;
+      
+
+      .check {
+        background: clr(primary, base);
+      }
     }
   }
 }

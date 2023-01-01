@@ -130,6 +130,7 @@ header {
   background: white;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.03);
   z-index: 30;
+  margin-bottom: 0.25rem;
 }
 header .logo {
   display: flex;
@@ -236,6 +237,7 @@ nav .mobile-menu {
 }
 
 .home {
+  position: relative;
   width: 100%;
   height: auto;
   display: flex;
@@ -260,8 +262,41 @@ nav .mobile-menu {
     flex-direction: column-reverse;
   }
 }
+.home::after {
+  content: "";
+  height: 350px;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #b3dee5;
+  opacity: 0.25;
+  border-radius: 51% 49% 100% 0%/45% 69% 31% 55%;
+}
+@media only screen and (max-width: 900px) {
+  .home::after {
+    display: none;
+  }
+}
+.home::before {
+  content: "";
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 12%;
+  left: 30%;
+  background: #fae6b1;
+  opacity: 0.4;
+  border-radius: 77% 23% 46% 54%/45% 53% 47% 55%;
+}
+@media only screen and (max-width: 900px) {
+  .home::before {
+    display: none;
+  }
+}
 .home .catch-phrase {
   color: #333333;
+  position: relative;
 }
 .home .catch-phrase span {
   color: #ffa101;
@@ -309,6 +344,47 @@ nav .mobile-menu {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -10;
+}
+.home .profil .freelancer,
+.home .profil .developper {
+  position: absolute;
+  color: #31525b;
+  background: white;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  font-size: 0.75rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.home .profil .freelancer .check,
+.home .profil .developper .check {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 100%;
+  color: #f5f5f5;
+}
+.home .profil .freelancer p,
+.home .profil .developper p {
+  opacity: 0.55;
+  font-size: 0.65rem;
+}
+.home .profil .freelancer {
+  top: 40%;
+}
+.home .profil .freelancer .check {
+  background: #ffa101;
+}
+.home .profil .developper {
+  right: 0;
+  bottom: 5%;
+}
+.home .profil .developper .check {
+  background: #333333;
 }
 
 *,
