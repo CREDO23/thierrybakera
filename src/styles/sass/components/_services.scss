@@ -2,46 +2,79 @@
 @use "../variables";
 @use "../functions" as *;
 
-.services{
+.services {
+  height: auto;
+  color: clr(primary, blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
 
-    color : clr(primary , blue);
+  .frontend {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20%;
+      aspect-ratio: 1/1;
+      top: 0;
+      left: 0;
+      border-left: solid 2px clr(primary, blue);
+      border-top: solid 2px clr(primary, yellow);
+      border-top-left-radius: 2rem;
+    }
+  }
+
+  .backend {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20%;
+      aspect-ratio: 1/1;
+      right: 0;
+      bottom: 0;
+      border-right: solid 2px clr(primary, yellow);
+      border-bottom: solid 2px clr(primary, blue);
+      border-bottom-right-radius: 2rem;
+    }
+  }
+
+  > div {
+    width: 20rem;
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1rem;
 
-    > div{
-        width: 20rem;
-        overflow: hidden;
+    @include mq(phone) {
+      width: 90%;
+    }
+
+    img {
+      width: 120px;
+    }
+
+    .comments {
+      > div {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        text-align: center;
-        padding: 1rem;
-        
-
-        img{
-            width: 120px;
-        }
-
-        .comments{
-
-           > div{
-            display: flex;
-            flex-direction: column;
-            align-items:center;
-            justify-content: space-between;
-            gap : 1rem;
-            margin: 2rem 0;
-            }
-
-        }
-
-        .icon{
-            font-size: ft-sz(600);
-            cursor: pointer;
-        }
+        justify-content: space-between;
+        gap: 1rem;
+        margin: 2rem 0;
+      }
     }
-    
+
+    .icon {
+      font-size: ft-sz(600);
+      cursor: pointer;
+    }
+  }
 }

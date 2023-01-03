@@ -513,11 +513,41 @@ nav .mobile-menu {
 }
 
 .services {
+  height: auto;
   color: #31525b;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  position: relative;
+}
+.services .frontend {
+  position: relative;
+}
+.services .frontend::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1/1;
+  top: 0;
+  left: 0;
+  border-left: solid 2px #31525b;
+  border-top: solid 2px #ffa101;
+  border-top-left-radius: 2rem;
+}
+.services .backend {
+  position: relative;
+}
+.services .backend::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1/1;
+  right: 0;
+  bottom: 0;
+  border-right: solid 2px #ffa101;
+  border-bottom: solid 2px #31525b;
+  border-bottom-right-radius: 2rem;
 }
 .services > div {
   width: 20rem;
@@ -528,6 +558,11 @@ nav .mobile-menu {
   justify-content: space-around;
   text-align: center;
   padding: 1rem;
+}
+@media only screen and (max-width: 500px) {
+  .services > div {
+    width: 90%;
+  }
 }
 .services > div img {
   width: 120px;

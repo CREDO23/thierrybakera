@@ -6,19 +6,6 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function () {
   return (
     <section className="services">
-      <div className="ui-ux">
-       
-        <img src={uiux} alt="" srcset="" />
-
-        <div className="comments">
-          <div >
-            <p>I value simple content structure , clean desugn patterns .</p>
-            <p>
-              <b>Tools</b>   : Figma , Photoshop , Ullustrator , AdobeXD , Font Awasome
-            </p>
-          </div>
-        </div>
-      </div>
       <div className="frontend">
         <img src={frontend} alt="" srcset="" />
 
@@ -35,6 +22,19 @@ export default function () {
           </div>
         </div>
       </div>
+      <div className="ui-ux">
+       
+       <img src={uiux} alt="" srcset="" />
+
+       <div className="comments">
+         <div >
+           <p>I value simple content structure , clean desugn patterns .</p>
+           <p>
+             <b>Tools</b>   : Figma , Photoshop , Ullustrator , AdobeXD , Font Awasome
+           </p>
+         </div>
+       </div>
+     </div>
       <div className="backend">
       <img src={backend} alt="" srcset="" />
 
