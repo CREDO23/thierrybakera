@@ -5,16 +5,7 @@
 
 .about{
     color:  clr(primary , blue);
-    background-image: -webkit-linear-gradient(
-        90deg,
-        transparent 0%,
-        transparent 50%,
-        white 50%,
-        white 100%
-      ),
-      -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03)
-            50%, white 50%, white 100%);
-    background-size: 0.2em 0.2em;
+   
     display: flex;
 
     > div{

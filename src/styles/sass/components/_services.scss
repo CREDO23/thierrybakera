@@ -1,0 +1,47 @@
+@use "../mixins" as *;
+@use "../variables";
+@use "../functions" as *;
+
+.services{
+
+    color : clr(primary , blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    > div{
+        width: 20rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        padding: 1rem;
+        
+
+        img{
+            width: 120px;
+        }
+
+        .comments{
+
+           > div{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: space-between;
+            gap : 1rem;
+            margin: 2rem 0;
+            }
+
+        }
+
+        .icon{
+            font-size: ft-sz(600);
+            cursor: pointer;
+        }
+    }
+    
+}

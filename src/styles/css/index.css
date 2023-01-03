@@ -244,8 +244,6 @@ nav .mobile-menu {
   align-items: center;
   justify-content: center;
   gap: 12rem;
-  background-image: -webkit-linear-gradient(90deg, transparent 0%, transparent 50%, white 50%, white 100%), -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 50%, white 50%, white 100%);
-  background-size: 0.2em 0.2em;
 }
 @media only screen and (max-width: 1024px) {
   .home {
@@ -389,8 +387,6 @@ nav .mobile-menu {
 
 .about {
   color: #31525b;
-  background-image: -webkit-linear-gradient(90deg, transparent 0%, transparent 50%, white 50%, white 100%), -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 50%, white 50%, white 100%);
-  background-size: 0.2em 0.2em;
   display: flex;
 }
 .about > div {
@@ -516,6 +512,39 @@ nav .mobile-menu {
   gap: 0.5rem;
 }
 
+.services {
+  color: #31525b;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.services > div {
+  width: 20rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 1rem;
+}
+.services > div img {
+  width: 120px;
+}
+.services > div .comments > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.services > div .icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 *,
 *::before,
 *::after {
@@ -532,6 +561,11 @@ nav .mobile-menu {
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+main {
+  background-image: -webkit-linear-gradient(90deg, transparent 0%, transparent 50%, white 50%, white 100%), -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 50%, white 50%, white 100%);
+  background-size: 0.2em 0.2em;
 }
 
 /*# sourceMappingURL=index.css.map */
