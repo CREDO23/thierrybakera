@@ -21,7 +21,7 @@ export default function () {
           <button>Contact Me</button>
         </div>
         <div className="media-socials">
-          <h3>You can also follow me here :</h3>
+          <h4>You can also follow me here :</h4>
           <ul>
             <li className="instagram">
               <FaInstagram size={30} />

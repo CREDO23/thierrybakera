@@ -35,31 +35,46 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+
+        &::before{
+            content : '';
+            position: absolute;
+            top :15%;
+            left : 49%;
+            height: 75%;
+            width: 20rem;
+            z-index: -10;
+            background: clr(primary , yellow);
+            transform: translateX(-50%);
+            border-radius: 1rem;
+        }
 
         img{
-            height : 75%
+            height : 75%;
+            background: clr(secondary , blue);
+            opacity: .5;
+            border-radius: 1rem;
+
+            @include mq(tablet){
+                background: none;
+                opacity: 1;
+            }
         }
     }
 
     .about-me{
-
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        @include mq(tablet-small){
-            align-items: center;
-
-        }
-        
-
+       
         h2{
             width: 90%;
             position: relative;
             margin-bottom: 1.25rem;
 
             @include mq(tablet-small){
-                text-align: center;
                 width: 100%;
             }
 
@@ -84,7 +99,6 @@
 
             @include mq(tablet){
                 width: 90%;
-                text-align: center;
             }
         }
 
@@ -111,7 +125,7 @@
         gap: 1rem;
         margin: 1rem 0;
 
-        h3{
+        h4{
             font-weight: 200;
         }
 

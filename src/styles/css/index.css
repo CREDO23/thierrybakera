@@ -412,19 +412,36 @@ nav .mobile-menu {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.about .image::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 49%;
+  height: 75%;
+  width: 20rem;
+  z-index: -10;
+  background: #ffa101;
+  transform: translateX(-50%);
+  border-radius: 1rem;
 }
 .about .image img {
   height: 75%;
+  background: #b3dee5;
+  opacity: 0.5;
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 900px) {
+  .about .image img {
+    background: none;
+    opacity: 1;
+  }
 }
 .about .about-me {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-@media only screen and (max-width: 760px) {
-  .about .about-me {
-    align-items: center;
-  }
 }
 .about .about-me h2 {
   width: 90%;
@@ -433,7 +450,6 @@ nav .mobile-menu {
 }
 @media only screen and (max-width: 760px) {
   .about .about-me h2 {
-    text-align: center;
     width: 100%;
   }
 }
@@ -458,7 +474,6 @@ nav .mobile-menu {
 @media only screen and (max-width: 900px) {
   .about .about-me p {
     width: 90%;
-    text-align: center;
   }
 }
 .about .about-me button {
@@ -483,7 +498,7 @@ nav .mobile-menu {
   gap: 1rem;
   margin: 1rem 0;
 }
-.about .media-socials h3 {
+.about .media-socials h4 {
   font-weight: 200;
 }
 .about .media-socials ul {
