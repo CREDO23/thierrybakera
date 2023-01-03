@@ -1,0 +1,148 @@
+
+@use "../mixins" as *;
+@use "../variables";
+@use "../functions" as *;
+
+
+.experiences{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color : clr(primary , blue);
+
+    > div{
+        position: relative;
+        width: 20rem;
+        aspect-ratio: 1/1;
+        overflow: visible;
+
+        @include mq(phone) {
+            width: 80%;
+          }
+
+        .hr-line{
+            background: clr(secondary , yellow);
+            height: 100%;
+            width: 1px;
+            position: absolute;
+        }
+
+        > span{
+            @include border($color : clr(secondary , yellow), $style : solid, $width : 1px, $radius : 10px);
+            padding : 0 1rem;
+            position: absolute;
+            top : 5%;
+            left : -1.5rem;
+            background: white;
+            z-index: 40
+        }
+
+        .comments{
+            position: absolute;
+            top : 20%;
+            left : 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap : .8rem;
+
+                h5{
+                    font-weight: 500;
+                    font-size: ft-sz(400);
+                    background: -webkit-linear-gradient(
+                        239deg,
+                        rgba(49, 82, 91, 1) 0%,
+                        rgb(223, 167, 15) 46%,
+                        rgba(49, 82, 91, 1) 100%
+                      );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+          
+
+            @include mq(phone) {
+                gap : 1.2rem;
+              }
+        }
+
+        .pourcentage{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: .5rem;
+          
+            > div{
+                @include border($color : rgba(113, 111, 111, 0.109), $style : solid, $width : 1px, $radius : 5px);
+                height: 1rem;
+
+                div{
+                    height: 100%;
+                    width: 70%;
+                    background: clr(secondary , yellow);
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+
+                    span{
+                        font-size: .6rem;
+                        margin: 7px;
+                    }
+                }
+
+                .react{
+                    width: 80%;
+                }
+
+                .tailwind{
+                    width: 75%;
+                }
+
+                .redux{
+                    width: 70%;
+                }
+
+                .bootstrap{
+                    width: 68%;
+                }
+
+                .figma{
+                    width: 65%;
+                }
+
+                .adobe{
+                    width: 57%;
+                }
+
+                .canva{
+                    width: 60%;
+                }
+
+                .photoshop{
+                    width: 50%;
+                }
+
+                .express{
+                    width: 80%;
+                }
+
+                .mongo{
+                    width: 74%;
+                }
+
+                .node{
+                    width: 65%;
+                }
+
+                .typescript{
+                    width: 68%;
+                }
+               
+            }
+
+
+        }
+    }
+}

@@ -46,8 +46,8 @@
     position: absolute;
     top: 12%;
     left: 30%;
-    background: clr(secondary , yellow);
-    opacity: .4;
+    background: clr(primary , yellow);
+    opacity: .2;
     border-radius:  77% 23% 46% 54% / 45% 53% 47% 55% ;
 
     @include mq(tablet) {
