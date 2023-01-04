@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Services";
 import Experiences from "./components/Experiences";
+import Projects from "./components/Projects";
 import "./styles/css/index.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <About/>
       <Services/>
       <Experiences/>
+      <Projects/>
       <Footer />
       </main>
     </>

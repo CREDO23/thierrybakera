@@ -435,6 +435,7 @@ nav .mobile-menu {
   }
 }
 .about .about-me {
+  font-size: 0.875rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -576,6 +577,9 @@ nav .mobile-menu {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.services > div .comments {
+  font-size: 1rem;
+}
 .services > div .comments > div {
   display: flex;
   flex-direction: column;
@@ -630,6 +634,7 @@ nav .mobile-menu {
   flex-direction: column;
   justify-content: space-between;
   gap: 0.8rem;
+  font-size: 1rem;
 }
 .experiences > div .comments h5 {
   font-weight: 500;
@@ -705,6 +710,47 @@ nav .mobile-menu {
 }
 .experiences > div .pourcentage > div .typescript {
   width: 68%;
+}
+
+.projects {
+  color: #31525b;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.projects > div {
+  width: 18rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+@media only screen and (max-width: 500px) {
+  .projects > div {
+    width: 90%;
+  }
+}
+.projects > div img {
+  width: 100%;
+  object-fit: contain;
+}
+.projects > div .description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.75rem;
+}
+.projects > div .description button {
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  .projects > div .description button {
+    display: block;
+  }
 }
 
 *,

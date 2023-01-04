@@ -1,0 +1,46 @@
+@use "../mixins" as *;
+@use "../variables";
+@use "../functions" as *;
+
+.projects {
+  color: clr(primary, blue);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  > div {
+    width: 18rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+
+    @include mq(phone) {
+        width: 90%;
+      }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: ft-sz(100);
+
+      button{
+        display: none;
+
+        @include mq(tablet){
+            display: block;
+        }
+      }
+    }
+  }
+}
