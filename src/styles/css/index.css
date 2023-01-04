@@ -722,34 +722,84 @@ nav .mobile-menu {
 }
 .projects > div {
   width: 18rem;
-  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.4rem;
   cursor: pointer;
+  background: white;
+  border-radius: 0.5rem;
 }
 @media only screen and (max-width: 500px) {
   .projects > div {
     width: 90%;
   }
 }
-.projects > div img {
+.projects > div .project-img {
+  position: relative;
+  border-radius: 0.5rem;
+}
+.projects > div .project-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 100%);
+}
+.projects > div .project-img img {
   width: 100%;
   object-fit: contain;
+  transition: all 0.5s;
+}
+.projects > div hr {
+  height: 1px;
+  width: 85%;
+  margin: 0.35rem 0;
+  border: none;
+  border-radius: 10px;
+  background: -webkit-linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(49, 82, 91, 0.5) 25%, rgba(223, 168, 15, 0.5) 45%, rgba(49, 82, 91, 0.5) 75%, rgb(255, 255, 255) 100%);
 }
 .projects > div .description {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
   gap: 1rem;
   font-size: 0.75rem;
 }
 .projects > div .description button {
   display: none;
+  background: white;
+  color: #ffa101;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fae6b1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 @media only screen and (max-width: 900px) {
   .projects > div .description button {
     display: block;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .projects > div:hover {
+    position: relative;
+  }
+  .projects > div:hover .project-img img {
+    transform: scale(1.2);
+  }
+  .projects > div:hover .description button {
+    display: block;
+    position: absolute;
+    padding: 0.35rem 1rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
 

@@ -13,6 +13,7 @@ export default function () {
         <div className="project-img">
             <img src={project1} alt="" srcset="" />
         </div>
+        <hr />
         <div className="description">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
@@ -25,6 +26,7 @@ export default function () {
         <div className="project-img">
         <img src={project2} alt="" srcset="" />
         </div>
+        <hr />
         <div className="description">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
@@ -37,6 +39,7 @@ export default function () {
         <div className="project-img">
         <img src={project3} alt="" srcset="" />
         </div>
+        <hr />
         <div className="description">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
@@ -49,6 +52,7 @@ export default function () {
         <div className="project-img">
         <img src={project4} alt="" srcset="" />
         </div>
+        <hr />
         <div className="description">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
@@ -61,6 +65,7 @@ export default function () {
         <div className="project-img">
         <img src={project5} alt="" srcset="" />
         </div>
+        <hr />
         <div className="description">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
@@ -73,6 +78,7 @@ export default function () {
         <div className="project-img">
         <img src={project6} alt="" srcset="" />
         </div>
+        <hr />
         <div className="description">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error

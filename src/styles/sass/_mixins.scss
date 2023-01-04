@@ -17,7 +17,7 @@
   }
 }
 
-@mixin border($color : black, $style : solid, $width : 1px, $radius : 5px) {
+@mixin border($color: black, $style: solid, $width: 1px, $radius: 5px) {
   border-style: $style;
   border-width: $width;
   border-color: $color;
@@ -25,11 +25,17 @@
   -webkit-border-radius: $radius;
 }
 
-@mixin mq($target) {
-  $size: map-get($breakpoints,$target);
+@mixin mq($target, $max: true) {
+  $size: map-get($breakpoints, $target);
 
-  @media only screen and (max-width: $size) {
-    @content;
+  @if $max {
+    @media only screen and (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $size) {
+      @content;
+    }
   }
 }
 
@@ -75,7 +81,7 @@
   }
 }
 
-@mixin btn-thin($color ,$hovercolor : rgb(182, 177, 177)) {
+@mixin btn-thin($color, $hovercolor: rgb(182, 177, 177)) {
   position: relative;
   transition: all 0.5s;
   cursor: pointer;
@@ -83,9 +89,9 @@
   background: inherit;
   color: #{$color};
 
-  &:hover{
+  &:hover {
     background: transparent;
-    color : #{$hovercolor}
+    color: #{$hovercolor};
   }
 
   &::after {
@@ -116,7 +122,7 @@
     z-index: 1;
     opacity: 0;
     transition: all 0.3s;
-    border: 1px solid  #{$hovercolor};
+    border: 1px solid #{$hovercolor};
     transform: scaleX(1.5);
   }
 
