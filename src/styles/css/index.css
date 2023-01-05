@@ -131,7 +131,7 @@ header {
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.03);
   z-index: 30;
   margin-bottom: 0.25rem;
-  position: static;
+  position: fixed;
   top: 0;
 }
 header .logo {
@@ -799,8 +799,76 @@ nav .mobile-menu {
   }
 }
 
+.contact {
+  color: #31525b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 40%;
+}
+@media only screen and (max-width: 900px) {
+  .contact form {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .contact form {
+    width: 90%;
+  }
+}
+.contact form input {
+  height: 2.2rem;
+  padding: 3px 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.contact form textarea {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  padding: 0.5rem;
+}
+.contact form input:focus, .contact form textarea:focus {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fae6b1;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.contact form label {
+  font-weight: 3s00;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.503);
+}
+.contact form button {
+  height: 2.2rem;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.contact form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.2rem;
+}
+
 #root {
-  color: red;
+  position: relative;
 }
 
 *,
@@ -808,6 +876,10 @@ nav .mobile-menu {
 *::after {
   box-sizing: border-box;
   font-family: Poppins, "san-serif";
+}
+
+input, textarea, button {
+  outline: none;
 }
 
 *::-webkit-scrollbar {

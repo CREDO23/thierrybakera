@@ -1,0 +1,61 @@
+@use "../mixins" as *;
+@use "../variables";
+@use "../functions" as *;
+
+.contact{
+    color : clr(primary , blue);
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1rem;
+        width: 40%;
+
+        @include mq(tablet){
+            width: 50%;
+        }
+
+        @include mq(phablet){
+            width: 90%;
+        }
+
+        input {
+            height: 2.2rem;
+            padding: 3px 10px;
+            @include border($color: rgba(0, 0, 0, 0.08), $style: solid, $width: 1px, $radius: 3px)
+        }
+
+        textarea{
+            @include border($color: rgba(0, 0, 0, 0.08), $style: solid, $width: 1px, $radius: 3px);
+            padding : .5rem
+        }
+
+        input:focus , textarea:focus {
+            @include border($color: clr(secondary , yellow), $style: solid, $width: 1px, $radius: 3px)
+        }
+
+        label{
+            font-weight: 3s00;
+            font-size: ft-sz(200);
+            color : rgba(0, 0, 0, 0.503)
+        }
+
+        button{
+            height: 2.2rem;
+            cursor: pointer;
+            @include border($color: transparent, $style: solid, $width: 1px, $radius: 3px)
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap : .2rem
+        }
+    }
+}

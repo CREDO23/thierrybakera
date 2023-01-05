@@ -3,6 +3,9 @@
 @use "../functions" as *;
 
 nav {
+  // @include mq(phone){
+  //   height: 100vh;
+  // }
   ul {
     padding: 0;
     margin: 1rem;

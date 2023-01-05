@@ -6,6 +6,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import "./styles/css/index.css";
 
 function App() {
@@ -19,8 +20,9 @@ function App() {
       <Services/>
       <Experiences/>
       <Projects/>
-      <Footer />
+      <Contact/>
       </main>
+      <Footer/>
     </>
   );
 }
