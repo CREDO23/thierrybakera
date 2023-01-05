@@ -1,12 +1,13 @@
 import frontend from "../assets/frontend.png";
 import backend from "../assets/backend.png";
-import uiux from "../assets/uxui.png";
-import { IoIosArrowForward } from "react-icons/io";
+import uiux from "../assets/ux-ui.png";
 
 export default function () {
   return (
-    <section className="services">
-      <div className="frontend">
+    <section id="Services" className="services">
+        <h2>What Services I'm Providing ?</h2>
+        <div className="content">
+        <div className="frontend">
         <img src={frontend} alt="" srcset="" />
 
         <h5>Frontend</h5>
@@ -55,6 +56,7 @@ export default function () {
           </div>
         </div>
       </div>
+        </div>
     </section>
   );
 }

@@ -3,89 +3,92 @@
 @use "../functions" as *;
 
 .services {
-  height: auto;
-  color: clr(primary, blue);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  position: relative;
+    color: clr(primary, blue);
 
-  .frontend {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 20%;
-      aspect-ratio: 1/1;
-      top: 0;
-      left: 0;
-      border-left: solid 2px clr(primary, blue);
-      border-top: solid 2px clr(primary, yellow);
-      border-top-left-radius: 1rem;
-    }
-  }
-
-  .backend {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 20%;
-      aspect-ratio: 1/1;
-      right: 0;
-      bottom: 0;
-      border-right: solid 2px clr(primary, yellow);
-      border-bottom: solid 2px clr(primary, blue);
-      border-bottom-right-radius: 1rem;
-    }
-  }
-
-  > div {
-    width: 20rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    padding: 1rem;
-
-    @include mq(phone) {
-      width: 90%;
-    }
-
-    img {
-      width: 120px;
-    }
-
-    h5{
-        font-weight: 500;
-        font-size: ft-sz(400);
-        margin: 1rem 0 0 0;
-        background: -webkit-linear-gradient(
-            239deg,
-            rgba(49, 82, 91, 1) 0%,
-            rgb(223, 167, 15) 46%,
-            rgba(49, 82, 91, 1) 100%
-          );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .comments {
-        font-size: ft-sz(300);
-      > div {
+    .content{
+        height: auto;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        margin: 2rem 0;
-      }
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        position: relative;
+      
+        .frontend {
+          position: relative;
+      
+          &::before {
+            content: "";
+            position: absolute;
+            width: 20%;
+            aspect-ratio: 1/1;
+            top: 0;
+            left: 0;
+            border-left: solid 2px clr(primary, blue);
+            border-top: solid 2px clr(primary, yellow);
+            border-top-left-radius: 1rem;
+          }
+        }
+      
+        .backend {
+          position: relative;
+      
+          &::before {
+            content: "";
+            position: absolute;
+            width: 20%;
+            aspect-ratio: 1/1;
+            right: 0;
+            bottom: 0;
+            border-right: solid 2px clr(primary, yellow);
+            border-bottom: solid 2px clr(primary, blue);
+            border-bottom-right-radius: 1rem;
+          }
+        }
+      
+        > div {
+          width: 20rem;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          text-align: center;
+          padding: 1rem;
+      
+          @include mq(phone) {
+            width: 90%;
+          }
+      
+          img {
+            width: 120px;
+          }
+      
+          h5{
+              font-weight: 500;
+              font-size: ft-sz(400);
+              margin: 1rem 0 0 0;
+              background: -webkit-linear-gradient(
+                  239deg,
+                  rgba(49, 82, 91, 1) 0%,
+                  rgb(223, 167, 15) 46%,
+                  rgba(49, 82, 91, 1) 100%
+                );
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+          }
+      
+          .comments {
+              font-size: ft-sz(300);
+            > div {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+              gap: 1rem;
+              margin: 2rem 0;
+            }
+          }
+        }
     }
-  }
 }

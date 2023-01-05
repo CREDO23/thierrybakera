@@ -1,7 +1,9 @@
 export default function () {
   return (
-    <section className="experiences">
-      <div className="frontend">
+    <section id="Experiences" className="experiences">
+        <h2>Work Experiences</h2>
+        <div className="content">
+        <div className="frontend">
         <div className="hr-line"></div>
         <span>2014 - Now</span>
         <div className="comments">
@@ -100,6 +102,7 @@ export default function () {
           </div>
         </div>
       </div>
+        </div>
     </section>
   );
 }

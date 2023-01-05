@@ -8,8 +8,10 @@ import project6 from '../assets/projects_images/project-6.png';
 
 export default function () {
   return (
-    <section className='projects'>
-      <div>
+    <section id='Projects' className='projects'>
+        <h2>My Recents Projects</h2>
+        <div className="content">
+        <div>
         <div className="project-img">
             <img src={project1} alt="" srcset="" />
         </div>
@@ -87,6 +89,7 @@ export default function () {
           <button>View more</button>
         </div>
       </div>
+        </div>
     </section>
   );
 }

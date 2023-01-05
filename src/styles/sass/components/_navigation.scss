@@ -18,7 +18,8 @@ nav {
       display: none;
     }
 
-    li {
+    a {
+      text-decoration: none;
       cursor: pointer;
       font-weight: light;
       @include link-behavior(clr(primary, blue), clr(primary, yellow));

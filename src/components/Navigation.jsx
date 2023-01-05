@@ -29,7 +29,7 @@ export default function () {
             onClick={() => handleActiveLink(index)}
             className={currentLink == index ? "active" : ""}
           >
-            {link}
+            <a href={'#'+link}>{link}</a>
           </li>
         ))}
       </ul>

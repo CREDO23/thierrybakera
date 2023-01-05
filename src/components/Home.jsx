@@ -3,7 +3,7 @@ import { FaCheck } from "react-icons/fa";
 
 export default function () {
   return (
-    <section className="home">
+    <section id="Home" className="home">
       <div className="catch-phrase">
         <h1>
           Hi , I am Thierry <br /> <span>Software Developper</span>

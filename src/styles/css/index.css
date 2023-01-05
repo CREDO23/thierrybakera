@@ -131,6 +131,8 @@ header {
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.03);
   z-index: 30;
   margin-bottom: 0.25rem;
+  position: static;
+  top: 0;
 }
 header .logo {
   display: flex;
@@ -185,16 +187,17 @@ nav ul {
     display: none;
   }
 }
-nav ul li {
+nav ul a {
+  text-decoration: none;
   cursor: pointer;
   font-weight: light;
   color: #31525b;
   position: relative;
 }
-nav ul li:hover, nav ul li:focus, nav ul li:active {
+nav ul a:hover, nav ul a:focus, nav ul a:active {
   color: #ffa101;
 }
-nav ul li .active::after {
+nav ul a .active::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -387,30 +390,32 @@ nav .mobile-menu {
 
 .about {
   color: #31525b;
+}
+.about .content {
   display: flex;
 }
-.about > div {
+.about .content > div {
   width: 60%;
 }
 @media only screen and (max-width: 760px) {
-  .about > div {
+  .about .content > div {
     width: 90%;
   }
 }
 @media only screen and (max-width: 760px) {
-  .about {
+  .about .content {
     flex-direction: column-reverse;
     align-items: center;
     margin: 1.5rem 0;
   }
 }
-.about .image {
+.about .content .image {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-.about .image::before {
+.about .content .image::before {
   content: "";
   position: absolute;
   top: 15%;
@@ -422,58 +427,43 @@ nav .mobile-menu {
   transform: translateX(-50%);
   border-radius: 1rem;
 }
-.about .image img {
+.about .content .image img {
   height: 75%;
   background: #b3dee5;
   opacity: 0.5;
   border-radius: 1rem;
 }
 @media only screen and (max-width: 900px) {
-  .about .image img {
+  .about .content .image img {
     background: none;
     opacity: 1;
   }
 }
-.about .about-me {
+.about .content .about-me {
   font-size: 0.875rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.about .about-me h2 {
-  width: 90%;
+.about .content .about-me h3 {
+  width: 60%;
   position: relative;
   margin-bottom: 1.25rem;
 }
 @media only screen and (max-width: 760px) {
-  .about .about-me h2 {
+  .about .content .about-me h3 {
     width: 100%;
   }
 }
-.about .about-me h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 60px;
-  border-radius: 5px;
-  background: #ffa101;
-}
-@media only screen and (max-width: 760px) {
-  .about .about-me h2::after {
-    display: none;
-  }
-}
-.about .about-me p {
+.about .content .about-me p {
   width: 70%;
 }
 @media only screen and (max-width: 900px) {
-  .about .about-me p {
+  .about .content .about-me p {
     width: 90%;
   }
 }
-.about .about-me button {
+.about .content .about-me button {
   margin: 1.25rem 0;
   height: 2rem;
   border: none;
@@ -484,21 +474,21 @@ nav .mobile-menu {
   background: #ffa101;
 }
 @media only screen and (max-width: 760px) {
-  .about .about-me button {
+  .about .content .about-me button {
     display: none;
   }
 }
-.about .media-socials {
+.about .content .media-socials {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
-.about .media-socials h4 {
+.about .content .media-socials h4 {
   font-weight: 200;
 }
-.about .media-socials ul {
+.about .content .media-socials ul {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -506,7 +496,7 @@ nav .mobile-menu {
   margin: 0;
   list-style-type: none;
 }
-.about .media-socials ul li {
+.about .content .media-socials ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -514,18 +504,20 @@ nav .mobile-menu {
 }
 
 .services {
-  height: auto;
   color: #31525b;
+}
+.services .content {
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
   position: relative;
 }
-.services .frontend {
+.services .content .frontend {
   position: relative;
 }
-.services .frontend::before {
+.services .content .frontend::before {
   content: "";
   position: absolute;
   width: 20%;
@@ -536,10 +528,10 @@ nav .mobile-menu {
   border-top: solid 2px #ffa101;
   border-top-left-radius: 1rem;
 }
-.services .backend {
+.services .content .backend {
   position: relative;
 }
-.services .backend::before {
+.services .content .backend::before {
   content: "";
   position: absolute;
   width: 20%;
@@ -550,7 +542,7 @@ nav .mobile-menu {
   border-bottom: solid 2px #31525b;
   border-bottom-right-radius: 1rem;
 }
-.services > div {
+.services .content > div {
   width: 20rem;
   overflow: hidden;
   display: flex;
@@ -561,14 +553,14 @@ nav .mobile-menu {
   padding: 1rem;
 }
 @media only screen and (max-width: 500px) {
-  .services > div {
+  .services .content > div {
     width: 90%;
   }
 }
-.services > div img {
+.services .content > div img {
   width: 120px;
 }
-.services > div h5 {
+.services .content > div h5 {
   font-weight: 500;
   font-size: 1.125rem;
   margin: 1rem 0 0 0;
@@ -577,10 +569,10 @@ nav .mobile-menu {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.services > div .comments {
+.services .content > div .comments {
   font-size: 1rem;
 }
-.services > div .comments > div {
+.services .content > div .comments > div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -590,30 +582,32 @@ nav .mobile-menu {
 }
 
 .experiences {
+  color: #31525b;
+}
+.experiences .content {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  color: #31525b;
 }
-.experiences > div {
+.experiences .content > div {
   position: relative;
   width: 20rem;
   aspect-ratio: 1/1;
   overflow: visible;
 }
 @media only screen and (max-width: 500px) {
-  .experiences > div {
+  .experiences .content > div {
     width: 80%;
   }
 }
-.experiences > div .hr-line {
+.experiences .content > div .hr-line {
   background: #fae6b1;
   height: 100%;
   width: 1px;
   position: absolute;
 }
-.experiences > div > span {
+.experiences .content > div > span {
   border-style: solid;
   border-width: 1px;
   border-color: #fae6b1;
@@ -626,7 +620,7 @@ nav .mobile-menu {
   background: white;
   z-index: 40;
 }
-.experiences > div .comments {
+.experiences .content > div .comments {
   position: absolute;
   top: 20%;
   left: 1.5rem;
@@ -636,7 +630,7 @@ nav .mobile-menu {
   gap: 0.8rem;
   font-size: 1rem;
 }
-.experiences > div .comments h5 {
+.experiences .content > div .comments h5 {
   font-weight: 500;
   font-size: 1.125rem;
   background: -webkit-linear-gradient(239deg, rgb(49, 82, 91) 0%, rgb(223, 167, 15) 46%, rgb(49, 82, 91) 100%);
@@ -645,17 +639,17 @@ nav .mobile-menu {
   -webkit-text-fill-color: transparent;
 }
 @media only screen and (max-width: 500px) {
-  .experiences > div .comments {
+  .experiences .content > div .comments {
     gap: 1.2rem;
   }
 }
-.experiences > div .pourcentage {
+.experiences .content > div .pourcentage {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 0.5rem;
 }
-.experiences > div .pourcentage > div {
+.experiences .content > div .pourcentage > div {
   border-style: solid;
   border-width: 1px;
   border-color: rgba(113, 111, 111, 0.109);
@@ -663,7 +657,7 @@ nav .mobile-menu {
   -webkit-border-radius: 5px;
   height: 1rem;
 }
-.experiences > div .pourcentage > div div {
+.experiences .content > div .pourcentage > div div {
   height: 100%;
   width: 70%;
   background: #fae6b1;
@@ -671,56 +665,58 @@ nav .mobile-menu {
   align-items: center;
   justify-content: start;
 }
-.experiences > div .pourcentage > div div span {
+.experiences .content > div .pourcentage > div div span {
   font-size: 0.6rem;
   margin: 7px;
 }
-.experiences > div .pourcentage > div .react {
+.experiences .content > div .pourcentage > div .react {
   width: 80%;
 }
-.experiences > div .pourcentage > div .tailwind {
+.experiences .content > div .pourcentage > div .tailwind {
   width: 75%;
 }
-.experiences > div .pourcentage > div .redux {
+.experiences .content > div .pourcentage > div .redux {
   width: 70%;
 }
-.experiences > div .pourcentage > div .bootstrap {
+.experiences .content > div .pourcentage > div .bootstrap {
   width: 68%;
 }
-.experiences > div .pourcentage > div .figma {
+.experiences .content > div .pourcentage > div .figma {
   width: 65%;
 }
-.experiences > div .pourcentage > div .adobe {
+.experiences .content > div .pourcentage > div .adobe {
   width: 57%;
 }
-.experiences > div .pourcentage > div .canva {
+.experiences .content > div .pourcentage > div .canva {
   width: 60%;
 }
-.experiences > div .pourcentage > div .photoshop {
+.experiences .content > div .pourcentage > div .photoshop {
   width: 50%;
 }
-.experiences > div .pourcentage > div .express {
+.experiences .content > div .pourcentage > div .express {
   width: 80%;
 }
-.experiences > div .pourcentage > div .mongo {
+.experiences .content > div .pourcentage > div .mongo {
   width: 74%;
 }
-.experiences > div .pourcentage > div .node {
+.experiences .content > div .pourcentage > div .node {
   width: 65%;
 }
-.experiences > div .pourcentage > div .typescript {
+.experiences .content > div .pourcentage > div .typescript {
   width: 68%;
 }
 
 .projects {
   color: #31525b;
+}
+.projects .content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
-.projects > div {
+.projects .content > div {
   width: 18rem;
   display: flex;
   flex-direction: column;
@@ -731,15 +727,15 @@ nav .mobile-menu {
   border-radius: 0.5rem;
 }
 @media only screen and (max-width: 500px) {
-  .projects > div {
+  .projects .content > div {
     width: 90%;
   }
 }
-.projects > div .project-img {
+.projects .content > div .project-img {
   position: relative;
   border-radius: 0.5rem;
 }
-.projects > div .project-img::after {
+.projects .content > div .project-img::after {
   content: "";
   position: absolute;
   top: 0;
@@ -749,12 +745,12 @@ nav .mobile-menu {
   background: rgb(255, 255, 255);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 100%);
 }
-.projects > div .project-img img {
+.projects .content > div .project-img img {
   width: 100%;
   object-fit: contain;
   transition: all 0.5s;
 }
-.projects > div hr {
+.projects .content > div hr {
   height: 1px;
   width: 85%;
   margin: 0.35rem 0;
@@ -762,14 +758,14 @@ nav .mobile-menu {
   border-radius: 10px;
   background: -webkit-linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(49, 82, 91, 0.5) 25%, rgba(223, 168, 15, 0.5) 45%, rgba(49, 82, 91, 0.5) 75%, rgb(255, 255, 255) 100%);
 }
-.projects > div .description {
+.projects .content > div .description {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   gap: 1rem;
   font-size: 0.75rem;
 }
-.projects > div .description button {
+.projects .content > div .description button {
   display: none;
   background: white;
   color: #ffa101;
@@ -782,18 +778,18 @@ nav .mobile-menu {
   cursor: pointer;
 }
 @media only screen and (max-width: 900px) {
-  .projects > div .description button {
+  .projects .content > div .description button {
     display: block;
   }
 }
 @media only screen and (min-width: 900px) {
-  .projects > div:hover {
+  .projects .content > div:hover {
     position: relative;
   }
-  .projects > div:hover .project-img img {
+  .projects .content > div:hover .project-img img {
     transform: scale(1.2);
   }
-  .projects > div:hover .description button {
+  .projects .content > div:hover .description button {
     display: block;
     position: absolute;
     padding: 0.35rem 1rem;
@@ -801,6 +797,10 @@ nav .mobile-menu {
     left: 50%;
     transform: translate(-50%);
   }
+}
+
+#root {
+  color: red;
 }
 
 *,
@@ -814,6 +814,10 @@ nav .mobile-menu {
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   overflow-y: scroll;
@@ -824,6 +828,35 @@ nav .mobile-menu {
 main {
   background-image: -webkit-linear-gradient(90deg, transparent 0%, transparent 50%, white 50%, white 100%), -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 50%, white 50%, white 100%);
   background-size: 0.2em 0.2em;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 400;
+  position: relative;
+}
+section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 3px;
+  width: 2rem;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(239deg, rgb(49, 82, 91) 0%, rgb(223, 167, 15) 46%, rgb(49, 82, 91) 100%);
+}
+
+.about {
+  margin-bottom: 2rem;
+}
+.about h2 {
+  text-align: center;
+  margin-bottom: 0rem;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,15 +1,17 @@
 import profil from "../assets/profil.png";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function () {
   return (
-    <section className="about">
-      <div className="image">
+    <section id="About me" className="about">
+        <h2>About me</h2>
+        <div className="content">
+        <div className="image">
         <img src={profil} alt="" srcset="" />
       </div>
       <div className="about-me">
         <div>
-          <h2>Developing With a Passion While Exploring The World.</h2>
+          <h3>Developing With a Passion While Exploring The World.</h3>
           <p>
             Since beginning my journey as a freelance developper , I’ve done
             remote work for agencies , consulted for statups , and collaborate
@@ -38,6 +40,7 @@ export default function () {
           </ul>
         </div>
       </div>
+        </div>
     </section>
   );
 }
