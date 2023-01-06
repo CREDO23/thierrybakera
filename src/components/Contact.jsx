@@ -3,7 +3,7 @@
 export default function(){
     return <section id="Contact" className="contact">
         <h2>Contact Me</h2>
-        <form >
+        <form data-aos='zoom-in' >
           <div>
             <label htmlFor="name">Your Name</label>
             <input type="text" id='name' />

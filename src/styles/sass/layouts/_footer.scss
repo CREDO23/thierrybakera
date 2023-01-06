@@ -18,46 +18,6 @@ footer {
   align-items: center;
   justify-content: space-around;
 
-  .hire-me-section {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    > div {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      gap: 6px;
-
-      div {
-        height: 2px;
-        width: 50%;
-        background-color: clr(primary, yellow);
-      }
-
-      span {
-        color: clr(secondary, base);
-        font-size: ft-sz(300);
-        @include mq(phone) {
-          font-size: ft-sz(200);
-        }
-      }
-
-    }
-    button {
-      margin: 1rem;
-      @include btn-thin(clr(secondary, blue), clr(secondary, base));
-      height: 2rem;
-      width: 6rem;
-      border-radius: 4px;
-      color: clr(secondary, base);
-    
-    }
-  }
-
   .navigation-section {
     width: 100%;
     display: flex;
@@ -84,6 +44,7 @@ footer {
       li {
         cursor: pointer;
         font-weight: light;
+        color : clr(secondary, blue);
         @include link-behavior(clr(secondary, blue) ,clr(primary, yellow) )
       }
     }

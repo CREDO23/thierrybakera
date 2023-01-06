@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   gap: 12rem;
+  color : clr(primary , blue);
 
   @include mq(tablet-wide) {
     gap: 6rem;
@@ -24,7 +25,7 @@
   }
 
   @include mq(phone , $max : false){
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   &::after{
@@ -62,6 +63,12 @@
   .catch-phrase {
     color: clr(primary, base);
     position: relative;
+
+    h1{
+        span{
+            @include fade-bg-text(clr(primary, yellow))
+        }
+    }
 
     span {
       color: clr(primary, yellow);

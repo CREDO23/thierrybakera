@@ -7,9 +7,9 @@ export default function () {
         <h2>About me</h2>
         <div className="content">
         <div className="image">
-        <img src={profil} alt="" srcset="" />
+        <img data-aos="fade-right" src={profil} alt="" srcset="" />
       </div>
-      <div className="about-me">
+      <div data-aos='fade-left' className="about-me">
         <div>
           <h3>Developing With a Passion While Exploring The World.</h3>
           <p>

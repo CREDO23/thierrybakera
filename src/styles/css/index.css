@@ -10,84 +10,6 @@ footer {
   align-items: center;
   justify-content: space-around;
 }
-footer .hire-me-section {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-footer .hire-me-section > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 6px;
-}
-footer .hire-me-section > div div {
-  height: 2px;
-  width: 50%;
-  background-color: #ffa101;
-}
-footer .hire-me-section > div span {
-  color: #f5f5f5;
-  font-size: 1rem;
-}
-@media only screen and (max-width: 500px) {
-  footer .hire-me-section > div span {
-    font-size: 0.875rem;
-  }
-}
-footer .hire-me-section button {
-  margin: 1rem;
-  position: relative;
-  transition: all 0.5s;
-  cursor: pointer;
-  border: none;
-  background: inherit;
-  color: #b3dee5;
-  height: 2rem;
-  width: 6rem;
-  border-radius: 4px;
-  color: #f5f5f5;
-}
-footer .hire-me-section button:hover {
-  background: transparent;
-  color: #f5f5f5;
-}
-footer .hire-me-section button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: all 0.3s;
-}
-footer .hire-me-section button:hover::after {
-  opacity: 0;
-  transform: scale(0.5, 0.5);
-  background: transparent;
-}
-footer .hire-me-section button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.3s;
-  border: 1px solid #f5f5f5;
-  transform: scaleX(1.5);
-}
-footer .hire-me-section button:hover::before {
-  opacity: 1;
-  transform: scale(1, 1);
-}
 footer .navigation-section {
   width: 100%;
   display: flex;
@@ -115,6 +37,7 @@ footer .navigation-section ul {
 footer .navigation-section ul li {
   cursor: pointer;
   font-weight: light;
+  color: #b3dee5;
   color: #b3dee5;
 }
 footer .navigation-section ul li:hover, footer .navigation-section ul li:focus, footer .navigation-section ul li:active {
@@ -256,6 +179,7 @@ nav .cancel-hamburger {
   align-items: center;
   justify-content: center;
   gap: 12rem;
+  color: #31525b;
 }
 @media only screen and (max-width: 1024px) {
   .home {
@@ -274,7 +198,7 @@ nav .cancel-hamburger {
 }
 @media only screen and (min-width: 500px) {
   .home {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 }
 .home::after {
@@ -312,6 +236,23 @@ nav .cancel-hamburger {
 .home .catch-phrase {
   color: #333333;
   position: relative;
+}
+.home .catch-phrase h1 span {
+  background: linear-gradient(to right, #ffa101 0, #31525b 10%, #ffa101);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 10s infinite ease-in;
+}
+@keyframes shine {
+  0% {
+    background-position: left;
+  }
+  60% {
+    background-position: 500px;
+  }
+  100% {
+    background-position: right;
+  }
 }
 .home .catch-phrase span {
   color: #ffa101;

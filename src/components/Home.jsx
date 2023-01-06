@@ -3,8 +3,8 @@ import { FaCheck } from "react-icons/fa";
 
 export default function () {
   return (
-    <section id="Home" className="home">
-      <div className="catch-phrase">
+    <section  id="Home" className="home">
+      <div data-aos='fade-right' className="catch-phrase">
         <h1>
           Hi , I am Thierry <br /> <span>Software Developper</span>
         </h1>
@@ -17,9 +17,9 @@ export default function () {
           <button className="hire-me">Hire me now</button>
         </div>
       </div>
-      <div className="profil">
+      <div data-aos='fade-left' className="profil">
         <img src={profil} alt="" srcset="" />
-        <div className="developper">
+        <div  data-aos='fade-up' className="developper">
           <div className="check">
             <FaCheck />
           </div>
@@ -28,7 +28,7 @@ export default function () {
             <p>Creatives Websites for you </p>
           </div>
         </div>
-        <div className="freelancer">
+        <div  data-aos='fade-down' className="freelancer">
           <div className="check">
             <FaCheck />
           </div>

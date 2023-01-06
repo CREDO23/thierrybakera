@@ -8,8 +8,15 @@ import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import "./styles/css/index.css";
+import 'aos/dist/aos.css'
+import AOS from 'aos'
+import {useEffect} from 'react'
 
 function App() {
+
+  useEffect(() => {
+    AOS.init();
+  },[])
 
   return (
     <>
