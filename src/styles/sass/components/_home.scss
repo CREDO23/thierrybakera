@@ -83,6 +83,19 @@
 
       .hire-me {
         background: clr(primary, blue);
+        border: solid 1px transparent;
+        transition: all .5s;
+
+        &:hover{
+            color: clr(primary, blue);
+            @include border(
+                $color: rgba(0, 0, 0, 0.145),
+                $style: solid,
+                $width: 1px,
+                $radius: 3px
+              ); 
+              background: clr(secondary, base);
+        }
       }
 
       .cv {

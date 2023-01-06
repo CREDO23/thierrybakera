@@ -156,7 +156,7 @@ header button {
   padding: 0.3rem 1rem;
   background: #ffa101;
   color: #f5f5f5;
-  border: solid #ffa101 2px;
+  border: solid transparent 2px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -331,6 +331,17 @@ nav .cancel-hamburger {
 }
 .home .catch-phrase .buttons .hire-me {
   background: #31525b;
+  border: solid 1px transparent;
+  transition: all 0.5s;
+}
+.home .catch-phrase .buttons .hire-me:hover {
+  color: #31525b;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.145);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background: #f5f5f5;
 }
 .home .catch-phrase .buttons .cv {
   background: transparent;
@@ -492,11 +503,17 @@ nav .cancel-hamburger {
   padding: 0 1rem;
   color: white;
   background: #ffa101;
+  transition: all 0.5s;
 }
 @media only screen and (max-width: 760px) {
   .about .content .about-me button {
     display: none;
   }
+}
+.about .content .about-me button:hover {
+  border: solid #ffa101 2px;
+  background: transparent;
+  color: #ffa101;
 }
 .about .content .media-socials {
   display: flex;
@@ -521,6 +538,7 @@ nav .cancel-hamburger {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
 .services {
@@ -879,6 +897,11 @@ nav .cancel-hamburger {
   border-color: transparent;
   border-radius: 3px;
   -webkit-border-radius: 3px;
+  background: #ffa101;
+  color: white;
+}
+.contact form button:hover {
+  background: rgba(255, 162, 1, 0.7176470588);
 }
 .contact form div {
   display: flex;

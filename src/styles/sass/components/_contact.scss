@@ -48,7 +48,13 @@
         button{
             height: 2.2rem;
             cursor: pointer;
-            @include border($color: transparent, $style: solid, $width: 1px, $radius: 3px)
+            @include border($color: transparent, $style: solid, $width: 1px, $radius: 3px);
+            background: clr(primary, yellow);
+            color : white;
+
+            &:hover{
+                background:  #ffa201b7;
+            }
         }
 
         div{

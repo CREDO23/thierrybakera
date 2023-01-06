@@ -4,13 +4,6 @@ import {FaFacebook , FaGithub , FaLinkedin , FaInstagram , FaTwitter} from 'reac
 export default function () {
   return (
     <footer>
-      <div className="hire-me-section">
-        <div>
-          <span>Have any Project in Mind ?</span>
-          <div></div>
-        </div>
-        <button>Hire me</button>
-      </div>
       <div className="navigation-section">
           <ul>
             <li>About me</li>
