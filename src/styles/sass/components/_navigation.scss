@@ -75,6 +75,18 @@ nav {
       position: absolute;
       left: 0;
       top: 0;
+      animation-name: mobile-menu;
+      animation-timing-function: ease-in;
+      animation-duration: 0.5s;
+    }
+
+    @keyframes mobile-menu {
+      from {
+        height: 0vh;
+      }
+      to {
+        height: 100vh;
+      }
     }
   }
 }

@@ -17,7 +17,7 @@ export default function () {
           <button className="hire-me">Hire me now</button>
         </div>
       </div>
-      <div data-aos='fade-left' className="profil">
+      <div  className="profil">
         <img src={profil} alt="" srcset="" />
         <div  data-aos='fade-up' className="developper">
           <div className="check">

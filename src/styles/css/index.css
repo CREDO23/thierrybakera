@@ -168,6 +168,17 @@ nav .cancel-hamburger {
     position: absolute;
     left: 0;
     top: 0;
+    animation-name: mobile-menu;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+  }
+  @keyframes mobile-menu {
+    from {
+      height: 0vh;
+    }
+    to {
+      height: 100vh;
+    }
   }
 }
 
@@ -316,7 +327,7 @@ nav .cancel-hamburger {
   top: 62%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -10;
+  z-index: -20;
 }
 .home .profil .freelancer,
 .home .profil .developper {
@@ -568,6 +579,7 @@ nav .cancel-hamburger {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .experiences .content > div {
   position: relative;
