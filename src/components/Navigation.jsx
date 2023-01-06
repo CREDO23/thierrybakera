@@ -11,8 +11,8 @@ export default function () {
   const navLikns = ["Home", "About me", "Services", "Experiences", "Projects"];
 
   const handleActiveLink = (index) => {
-    console.log(currentLink);
     setCurrentLink(index);
+    setHamburgerOpen(!hamburgerOpen);
   };
 
   return (

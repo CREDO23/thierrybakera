@@ -122,6 +122,7 @@ footer .navigation-section ul li:hover, footer .navigation-section ul li:focus, 
 }
 
 header {
+  overflow: visible;
   width: 100%;
   height: 3.5rem;
   display: flex;
@@ -129,7 +130,7 @@ header {
   justify-content: space-between;
   background: white;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.03);
-  z-index: 30;
+  z-index: 50;
   margin-bottom: 0.25rem;
   position: fixed;
   top: 0;
@@ -160,6 +161,10 @@ header button {
   cursor: pointer;
   transition: all 0.5s ease;
 }
+header button a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
 @media only screen and (max-width: 760px) {
   header button {
     display: none;
@@ -167,8 +172,10 @@ header button {
 }
 header button:hover {
   border: solid #ffa101 2px;
-  color: #ffa101;
   background: transparent;
+}
+header button:hover a {
+  color: #ffa101;
 }
 
 nav ul {
@@ -226,17 +233,19 @@ nav .cancel-hamburger {
   z-index: 20;
   color: #31525b;
 }
-nav .mobile-menu {
-  margin: 0;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  flex-direction: column;
-  background: #fae6b1;
-  z-index: 10;
-  position: absolute;
-  left: 0;
-  top: 0;
+@media only screen and (max-width: 760px) {
+  nav .mobile-menu {
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background: #fae6b1;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .home {
@@ -261,6 +270,11 @@ nav .mobile-menu {
 @media only screen and (max-width: 760px) {
   .home {
     flex-direction: column-reverse;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .home {
+    margin-top: 2rem;
   }
 }
 .home::after {
@@ -323,9 +337,15 @@ nav .mobile-menu {
   color: #31525b;
   border-style: solid;
   border-width: 1px;
-  border-color: #31525b;
+  border-color: rgba(0, 0, 0, 0.145);
   border-radius: 3px;
   -webkit-border-radius: 3px;
+  transition: all 0.5s;
+}
+.home .catch-phrase .buttons .cv:hover {
+  background: #31525b;
+  border-color: transparent;
+  color: white;
 }
 .home .profil {
   position: relative;

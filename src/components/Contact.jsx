@@ -1,7 +1,7 @@
 
 
 export default function(){
-    return <section className="contact">
+    return <section id="Contact" className="contact">
         <h2>Contact Me</h2>
         <form >
           <div>

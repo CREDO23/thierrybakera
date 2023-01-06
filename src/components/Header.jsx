@@ -14,7 +14,7 @@ export default function () {
         <span>hierry</span>
       </div>
        <Navigation/>
-        <button>Contact me</button>
+        <button><a href="#Contact">Contact me</a></button>
     </header>
   );
 }

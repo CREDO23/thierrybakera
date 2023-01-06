@@ -3,19 +3,20 @@
 @use "../functions" as *;
 
 header {
+  overflow: visible;
   width: 100%;
   height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: white;
-  box-shadow: 0px 3px 3px rgba(0,0,0, .03);
-  z-index: 30;
-  margin-bottom: .25rem;
-  position : fixed;
-  top:0;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.03);
+  z-index: 50;
+  margin-bottom: 0.25rem;
+  position: fixed;
+  top: 0;
 
-.logo{
+  .logo {
     display: flex;
     align-items: flex-end;
     font-size: ft-sz(600);
@@ -23,36 +24,41 @@ header {
     cursor: pointer;
     color: clr(primary, blue);
 
-    .first-letter{
-        font-size: ft-sz(600);
-        font-weight: bolder;
-        padding: 0 .5rem;
-        background: clr(primary, yellow);
-        color: white;
-        border-radius: 3px;
-    }
-
-}
-
-
-    button{
-        margin: 1rem;
-        padding : 0.3rem 1rem;
-        background: clr(primary, yellow) ;
-        color : clr(secondary , base);
-        border: solid clr(primary, yellow) 2px ;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.5s ease;
-        @include mq(tablet-small){
-            display: none;
-        }
-
-        &:hover{
-            border: solid clr(primary, yellow) 2px ;
-            color :  clr(primary, yellow);
-            background: transparent;
-        }
+    .first-letter {
+      font-size: ft-sz(600);
+      font-weight: bolder;
+      padding: 0 0.5rem;
+      background: clr(primary, yellow);
+      color: white;
+      border-radius: 3px;
     }
   }
 
+  button {
+    a {
+      text-decoration: none;
+      color: clr(secondary, base);
+    }
+
+    margin: 1rem;
+    padding: 0.3rem 1rem;
+    background: clr(primary, yellow);
+    color: clr(secondary, base);
+    border: solid clr(primary, yellow) 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    @include mq(tablet-small) {
+      display: none;
+    }
+
+    &:hover {
+      border: solid clr(primary, yellow) 2px;
+      background: transparent;
+
+      a {
+        color: clr(primary, yellow);
+      }
+    }
+  }
+}

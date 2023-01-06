@@ -63,16 +63,18 @@ nav {
     color : clr(primary , blue)
   }
 
-  .mobile-menu {
-    margin: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    background: clr(secondary, yellow);
-    z-index: 10;
-    position: absolute;
-    left: 0;
-    top: 0;
+  @include mq(tablet-small){
+    .mobile-menu {
+      margin: 0;
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+      background: clr(secondary, yellow);
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
 }
