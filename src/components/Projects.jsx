@@ -1,9 +1,7 @@
-import project1 from "../assets/projects_images/project-1.png";
-import project2 from "../assets/projects_images/project-2.png";
-import project3 from "../assets/projects_images/project-3.png";
-import project4 from "../assets/projects_images/project-4.png";
-import project5 from "../assets/projects_images/project-5.png";
-import project6 from "../assets/projects_images/project-6.png";
+import chataw from '../assets/projects_images/chataw.png';
+import quiz from '../assets/projects_images/quiz.png';
+import spes from '../assets/projects_images/spes.png';
+import streaming from '../assets/projects_images/streaming.png';
 
 export default function () {
   return (
@@ -12,80 +10,50 @@ export default function () {
       <div className="content">
         <div data-aos='flip-left'>
           <div className="project-img">
-            <img src={project1} alt="" srcset="" />
+            <img src={chataw} alt="" srcset="" />
           </div>
           <hr />
           <div className="description">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-              atque, provident .
+            A Real Time Chat App that allows people to discuss either on a private chat or a channel chat .
             </p>
-            <button>View more</button>
+            <button> <a href="https://chataw.vercel.app/home">View more</a> </button>
           </div>
         </div>
         <div data-aos='flip-left'>
           <div className="project-img">
-            <img src={project2} alt="" srcset="" />
+            <img src={quiz} alt="" srcset="" />
           </div>
           <hr />
           <div className="description">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-              atque, provident .
+              A Quiz App .
             </p>
-            <button>View more</button>
+            <button> <a href="https://credo23.github.io/QuizApp/">View more</a> </button>
           </div>
         </div>
         <div data-aos='flip-left'>
           <div className="project-img">
-            <img src={project3} alt="" srcset="" />
+            <img src={spes} alt="" srcset="" />
           </div>
           <hr />
           <div className="description">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-              atque, provident .
+              A Quick Book app , its allow you to keep track your financials functions like incomes , expenses and can generate a repport .
             </p>
-            <button>View more</button>
+            <button> <a href="https://spes-sigma.vercel.app/">View more</a> </button>
           </div>
         </div>
         <div data-aos='flip-left'>
           <div className="project-img">
-            <img src={project4} alt="" srcset="" />
+            <img src={streaming} alt="" srcset="" />
           </div>
           <hr />
           <div className="description">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-              atque, provident .
+             A streaming web site that consume the spotify API , its allow you to listen and have acess to your spotify playlist and songs.
             </p>
-            <button>View more</button>
-          </div>
-        </div>
-        <div data-aos='flip-left'>
-          <div className="project-img">
-            <img src={project5} alt="" srcset="" />
-          </div>
-          <hr />
-          <div className="description">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-              atque, provident .
-            </p>
-            <button>View more</button>
-          </div>
-        </div>
-        <div data-aos='flip-left'>
-          <div className="project-img">
-            <img src={project6} alt="" srcset="" />
-          </div>
-          <hr />
-          <div className="description">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-              atque, provident .
-            </p>
-            <button>View more</button>
+            <button> <a href="https://streamingcr.netlify.app/">View more</a> </button>
           </div>
         </div>
       </div>

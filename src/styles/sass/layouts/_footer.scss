@@ -18,11 +18,22 @@ footer {
   align-items: center;
   justify-content: space-around;
 
+
+
   .navigation-section {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: light;
+      color : white;
+      @include link-behavior(clr(secondary, blue), clr(primary, yellow));
+      position: relative;
+    }
 
     @include mq(phone) {
       flex-direction: column;
@@ -45,7 +56,8 @@ footer {
         cursor: pointer;
         font-weight: light;
         color : clr(secondary, blue);
-        @include link-behavior(clr(secondary, blue) ,clr(primary, yellow) )
+        @include link-behavior(clr(secondary, blue) ,clr(primary, yellow) );
+
       }
     }
   }

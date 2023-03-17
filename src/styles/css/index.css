@@ -16,6 +16,17 @@ footer .navigation-section {
   align-items: center;
   justify-content: space-between;
 }
+footer .navigation-section a {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: light;
+  color: white;
+  color: #b3dee5;
+  position: relative;
+}
+footer .navigation-section a:hover, footer .navigation-section a:focus, footer .navigation-section a:active {
+  color: #ffa101;
+}
 @media only screen and (max-width: 500px) {
   footer .navigation-section {
     flex-direction: column;
@@ -787,6 +798,10 @@ nav .cancel-hamburger {
     top: 40%;
     left: 50%;
     transform: translate(-50%);
+  }
+  .projects .content > div:hover .description button a {
+    text-decoration: none;
+    color: #ffa101;
   }
 }
 

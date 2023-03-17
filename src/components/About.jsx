@@ -13,12 +13,11 @@ export default function () {
         <div>
           <h3>Developing With a Passion While Exploring The World.</h3>
           <p>
-            Since beginning my journey as a freelance developper , I’ve done
+            Since beginning my journey as a Web developper , I've done
             remote work for agencies , consulted for statups , and collaborate
             with talend people to create digital products for both business and
             consumer use . I’m quietly confident , naturally curious , and
-            perpetually working on improving my chops one design problem at a
-            time
+            perpetually working on improving my chops and problem solving .
           </p>
           <button>Contact Me</button>
         </div>
