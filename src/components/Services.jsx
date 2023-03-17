@@ -20,8 +20,7 @@ export default function () {
               </p>
 
               <p>
-                <b>Language</b> : Javascript with React , Redux , Material UI
-                and AJAX
+                <b>Language</b> : Javascript with NextJs, ReactJs, Redux Toolkit, TailwindCss
               </p>
             </div>
           </div>
@@ -35,8 +34,7 @@ export default function () {
             <div>
               <p>I value simple content structure , clean desugn patterns .</p>
               <p>
-                <b>Tools</b> : Figma , Photoshop , Ullustrator , AdobeXD , Font
-                Awasome
+                <b>Tools</b> : Figma , Photoshop
               </p>
             </div>
           </div>
@@ -51,7 +49,7 @@ export default function () {
                 fell very comfortable on the backend side
               </p>
               <p>
-                <b>Languages</b> : PHP , Ruby , Python .
+                <b>Languages</b> : Javascript with NodeJs/ExpressJs
               </p>
             </div>
           </div>

@@ -17,7 +17,7 @@ export default function(){
             <textarea id="message" cols="22" rows="4"></textarea>
           </div>
           <div>
-            <button type='submit'>Envoyer</button>
+            <button type='submit'>Send</button>
           </div>
         </form>
     </section>
