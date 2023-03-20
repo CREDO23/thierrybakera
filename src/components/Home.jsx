@@ -1,4 +1,4 @@
-import profil from "../assets/profil.png";
+import profil from "../assets/me.png";
 import { FaCheck } from "react-icons/fa";
 
 export default function () {
@@ -18,7 +18,7 @@ export default function () {
         </div>
       </div>
       <div  className="profil">
-        <img src={profil} alt="" srcset="" />
+        <img width={460} height={550} src={profil} alt="" srcset="" />
         <div  data-aos='fade-up' className="developper">
           <div className="check">
             <FaCheck />
