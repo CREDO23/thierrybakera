@@ -115,6 +115,14 @@
           $radius: 3px
         );
         transition: all .5s;
+        a{
+          color: clr(primary, blue);
+          text-decoration: none;
+
+          &:hover{
+            color: white;
+          }
+        }
 
         &:hover{
             background: clr(primary, blue);

@@ -316,6 +316,13 @@ nav .cancel-hamburger {
   -webkit-border-radius: 3px;
   transition: all 0.5s;
 }
+.home .catch-phrase .buttons .cv a {
+  color: #31525b;
+  text-decoration: none;
+}
+.home .catch-phrase .buttons .cv a:hover {
+  color: white;
+}
 .home .catch-phrase .buttons .cv:hover {
   background: #31525b;
   border-color: transparent;
@@ -422,10 +429,10 @@ nav .cancel-hamburger {
   border-radius: 1rem;
 }
 .about .content .image img {
-  height: 75%;
+  height: 90%;
   background: #b3dee5;
   opacity: 0.5;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 @media only screen and (max-width: 900px) {
   .about .content .image img {
@@ -497,11 +504,22 @@ nav .cancel-hamburger {
   list-style-type: none;
 }
 .about .content .media-socials ul li {
+  cursor: pointer;
+}
+.about .content .media-socials ul li a {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  cursor: pointer;
+  text-decoration: none;
+  color: #31525b;
+}
+.about .content .media-socials ul li a:hover {
+  color: #ffa101;
+}
+.about .content .media-socials ul li:hover {
+  color: #ffa101;
+  transition: 0.3s;
 }
 
 .services {
@@ -876,6 +894,10 @@ nav .cancel-hamburger {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 0.2rem;
+}
+
+main {
+  color: red;
 }
 
 #root {

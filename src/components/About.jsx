@@ -1,5 +1,5 @@
 import me from "../assets/me.png";
-import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 export default function () {
   return (
@@ -32,16 +32,23 @@ export default function () {
             <h4>You can also follow me here :</h4>
             <ul>
               <li className="instagram">
-                <FaInstagram size={30} />
-                <span>INSTAGRAM</span>
+                
+                 <a href="https://github.com/CREDO23">
+                 <FaGithub size={30} />
+                   <span>GITHUB</span>
+                  </a> 
               </li>
               <li className="linkedin">
+              <a href="https://www.linkedin.com/in/thierrybakera/">
                 <FaLinkedin size={30} />
                 <span>LINKEDIN</span>
+                </a>
               </li>
               <li className="twitter">
+              <a href="https://twitter.com/ThierryBakera">
                 <FaTwitter size={30} />
                 <span>TWITTER</span>
+                </a>
               </li>
             </ul>
           </div>
