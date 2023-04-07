@@ -1,5 +1,6 @@
 import profil from "../assets/me.png";
 import { FaCheck } from "react-icons/fa";
+import mycv from '../assets/Credo-CV.pdf'
 
 export default function () {
   return (
@@ -13,7 +14,7 @@ export default function () {
           do
         </p>
         <div className="buttons">
-          <button className="cv">Download CV</button>
+          <button className="cv"> <a download="Credo-CV.pdf" href={mycv} >Download My Cv</a></button>
           <button className="hire-me">Hire me now</button>
         </div>
       </div>

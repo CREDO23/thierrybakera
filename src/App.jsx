@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="main">
       <Home/>
       <About/>
       <Services/>

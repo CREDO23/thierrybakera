@@ -43,10 +43,10 @@
             }
     
             img{
-                // height : 75%;
+                height : 90%;
                 background: clr(secondary , blue);
                 opacity: .5;
-                border-radius: 1rem;
+                border-radius: .5rem;
     
                 @include mq(tablet){
                     background: none;
@@ -125,11 +125,26 @@
                 list-style-type: none;
     
                li{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap : .5rem;
+               
                 cursor: pointer;
+
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap : .5rem;
+                    text-decoration: none ;
+                    color: clr(primary, blue);
+
+                    &:hover{
+                        color: clr(primary, yellow);
+                    }
+                }
+
+                &:hover{
+                    color: clr(primary, yellow);
+                    transition: .3s;
+                }
                }
             }
         }

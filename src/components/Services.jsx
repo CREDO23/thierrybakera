@@ -32,7 +32,7 @@ export default function () {
 
           <div className="comments">
             <div>
-              <p>I value simple content structure , clean desugn patterns .</p>
+              <p>I value simple content structure , clean design patterns .</p>
               <p>
                 <b>Tools</b> : Figma , Photoshop
               </p>
