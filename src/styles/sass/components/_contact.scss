@@ -27,11 +27,11 @@
         input {
             height: 2.2rem;
             padding: 3px 10px;
-            @include border($color: rgba(0, 0, 0, 0.08), $style: solid, $width: 1px, $radius: 3px)
+            @include border($color: rgba(0, 0, 0, 0.1), $style: solid, $width: 1px, $radius: 3px)
         }
 
         textarea{
-            @include border($color: rgba(0, 0, 0, 0.08), $style: solid, $width: 1px, $radius: 3px);
+            @include border($color: rgba(0, 0, 0, 0.1), $style: solid, $width: 1px, $radius: 3px);
             padding : .5rem
         }
 

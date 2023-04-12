@@ -27,8 +27,7 @@ export default function () {
           <hr />
           <div className="description">
             <p>
-              A Quiz App .
-            </p>
+              A Quiz App . <br /> Enables the user to undertake a series of questions on Javascript language.</p>
             <button> <a href="https://credo23.github.io/QuizApp/">View more</a> </button>
           </div>
         </div>

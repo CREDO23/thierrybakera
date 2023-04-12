@@ -77,7 +77,6 @@
     .buttons {
       margin: 1rem 0;
       display: flex;
-      gap: 2rem;
 
       button {
         height: 2rem;
@@ -118,6 +117,12 @@
         a{
           color: clr(primary, blue);
           text-decoration: none;
+          width: 100%;
+          display: inline-block;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           &:hover{
             color: white;
