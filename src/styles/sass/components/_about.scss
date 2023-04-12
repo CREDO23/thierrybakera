@@ -90,6 +90,11 @@
                 color: white;
                 background: clr(primary,yellow);
                 transition: all .5s;
+
+                a {
+                    text-decoration: none;
+                    color: clr(secondary, base);
+                  }
     
                 @include mq(tablet-small){
                     display: none;
@@ -98,7 +103,11 @@
                  &:hover {
                     border: solid clr(primary, yellow) 2px;
                     background: transparent;
-                      color: clr(primary, yellow);
+                    color: clr(primary, yellow);
+
+                    a {
+                        color: clr(primary, yellow);
+                      }
                     
                   }
             }

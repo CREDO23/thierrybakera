@@ -26,7 +26,7 @@ export default function () {
               consumer use . I’m quietly confident , naturally curious , and
               perpetually working on improving my chops and problem solving .
             </p>
-            <button>Contact Me</button>
+            <button><a href="#Contact">Contact me</a></button>
           </div>
           <div className="media-socials">
             <h4>You can also follow me here :</h4>

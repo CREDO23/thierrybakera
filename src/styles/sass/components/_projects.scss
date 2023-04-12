@@ -85,6 +85,10 @@
           @include border($color : clr(secondary , yellow), $style : solid, $width : 1px, $radius : 5px);
           padding: 0.5rem;
           cursor: pointer;
+          a{
+            text-decoration: none;
+            color: clr(primary , yellow);
+          }
   
           @include mq(tablet){
               display: block;

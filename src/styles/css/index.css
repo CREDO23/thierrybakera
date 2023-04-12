@@ -282,7 +282,6 @@ nav .cancel-hamburger {
 .home .catch-phrase .buttons {
   margin: 1rem 0;
   display: flex;
-  gap: 2rem;
 }
 .home .catch-phrase .buttons button {
   height: 2rem;
@@ -319,6 +318,12 @@ nav .cancel-hamburger {
 .home .catch-phrase .buttons .cv a {
   color: #31525b;
   text-decoration: none;
+  width: 100%;
+  display: inline-block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .home .catch-phrase .buttons .cv a:hover {
   color: white;
@@ -475,6 +480,10 @@ nav .cancel-hamburger {
   background: #ffa101;
   transition: all 0.5s;
 }
+.about .content .about-me button a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
 @media only screen and (max-width: 760px) {
   .about .content .about-me button {
     display: none;
@@ -483,6 +492,9 @@ nav .cancel-hamburger {
 .about .content .about-me button:hover {
   border: solid #ffa101 2px;
   background: transparent;
+  color: #ffa101;
+}
+.about .content .about-me button:hover a {
   color: #ffa101;
 }
 .about .content .media-socials {
@@ -524,6 +536,7 @@ nav .cancel-hamburger {
 
 .services {
   color: #31525b;
+  overflow: hidden;
 }
 .services .content {
   height: auto;
@@ -797,6 +810,10 @@ nav .cancel-hamburger {
   padding: 0.5rem;
   cursor: pointer;
 }
+.projects .content > div .description button a {
+  text-decoration: none;
+  color: #ffa101;
+}
 @media only screen and (max-width: 900px) {
   .projects .content > div .description button {
     display: block;
@@ -851,14 +868,14 @@ nav .cancel-hamburger {
   padding: 3px 10px;
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   -webkit-border-radius: 3px;
 }
 .contact form textarea {
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   -webkit-border-radius: 3px;
   padding: 0.5rem;

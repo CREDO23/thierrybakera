@@ -5,12 +5,11 @@ export default function () {
       <div className="content">
         <div data-aos='zoom-in' className="frontend">
           <div className="hr-line"></div>
-          <span>2014 - Now</span>
+          <span>2021 - Now</span>
           <div className="comments">
             <h5>Frontend</h5>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            Build the front-end portion of websites and web applications. <br/> The part users see and interact with.
             </p>
             <div className="pourcentage">
               <div>
@@ -38,12 +37,11 @@ export default function () {
         </div>
         <div data-aos='zoom-in' className="ui-ux">
           <div className="hr-line"></div>
-          <span>2017 - Now</span>
+          <span>2019 - 2022</span>
           <div className="comments">
             <h5>UX / UI</h5>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            Interactive and visual design principles on websites and web applications for a positive and cohesive user experience. 
             </p>
             <div className="pourcentage">
               <div>
@@ -71,12 +69,11 @@ export default function () {
         </div>
         <div data-aos='zoom-in' className="backend">
           <div className="hr-line"></div>
-          <span>2020 - Now</span>
+          <span>2021 - Now</span>
           <div className="comments">
             <h5>Backend</h5>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            Build and maintain the mechanisms that process data , security and perform actions on websites. 
             </p>
             <div className="pourcentage">
               <div>

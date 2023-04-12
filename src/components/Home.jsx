@@ -15,7 +15,6 @@ export default function () {
         </p>
         <div className="buttons">
           <button className="cv"> <a download="Credo-CV.pdf" href={mycv} >Download My Cv</a></button>
-          <button className="hire-me">Hire me now</button>
         </div>
       </div>
       <div  className="profil">

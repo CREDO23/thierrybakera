@@ -1,4 +1,4 @@
-
+import  { Toaster } from 'react-hot-toast';
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -28,6 +28,7 @@ function App() {
       <Experiences/>
       <Projects/>
       <Contact/>
+      <Toaster/>
       </main>
       <Footer/>
     </>
