@@ -7,7 +7,7 @@ export default function () {
     <section  id="Home" className="home">
       <div data-aos='fade-right' className="catch-phrase">
         <h1>
-          Hi , I am Thierry <br /> <span>Software Developper</span>
+          Hi , I am Thierry <br /> <span>Software Developer</span>
         </h1>
         <p>
           I Design and code beautifully Web Application and <br /> I love what I
