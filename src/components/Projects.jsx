@@ -27,7 +27,7 @@ export default function () {
           <hr />
           <div className="description">
             <p>
-              A Quiz App . <br /> Enables the user to undertake a series of questions on Javascript language.</p>
+              A quizapp that the user is supposed to respond to a series of questions about Javascript language.</p>
             <button> <a href="https://credo23.github.io/QuizApp/">View more</a> </button>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function () {
           <hr />
           <div className="description">
             <p>
-             A streaming web site that consume the spotify API , its allow you to listen and have acess to your spotify playlist and songs.
+             A streaming web site that consume the spotify API , its allow you to listen and have access to your spotify playlist and songs.
             </p>
             <button> <a href="https://streamingcr.netlify.app/">View more</a> </button>
           </div>
